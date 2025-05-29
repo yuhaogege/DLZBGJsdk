@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) CompanyNameMagicTag 2018-2019. All rights reserved.
+ * Description: dbk struct def.
+ * Author: CompanyName
+ * Create: 2018-10-31
+ */
+
+#define SOC_TYPES_H
+#define EXT_START_HEADER
+#define EXT_END_HEADER
+#include "soc_product_config.h"
+#include "dfx_dbk_hplc_struct_def_19011.h"
+#include "soc_mdm_types.h"
+#include "dbk_hdb_common.h"
+#include "soc_config.h"
+#include "dfx_sal.h"
+#include "dfx_sys.h"
+#include "dfx_sys_sdm.h"
+#include "soc_mdm_crash.h"
+#include "soc_ndm.h"
+#include "dfx_low_power.h"
+
+typedef struct {
+    td_u32 buffer[2];
+    td_u32 size;
+} demo_stru;
+
+typedef struct {
+    td_u16 status;
+    td_u8 enable;
+    td_u8 flag;
+    td_u32 size;
+    td_u32 cnt;
+} demo2_stru;
+

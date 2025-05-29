@@ -1,0 +1,48 @@
+<PRODUCT name="DW21">
+    <MODULE name="user_panel" value="yes">
+        <item depends="" help="means the log level. CNComments:表示log等级" name="PRODUCT_CFG_LOG_LEVEL" type="0x0" value="1" />
+        <item depends="" help="means whether the DEBUG or release version is compile. CNComments:表示编译DEBUG还是release版本" name="PRODUCT_CFG_BUILD_RELEASE" type="0x0" value="yes" />
+        <item depends="" help="" name="PRODUCT_CFG_CHIP_SOLUTION_NAME" type="0x2" value="&quot;DW21&quot;" />
+        <item depends="" help="" name="PRODUCT_CFG_VERSION_STR" type="0x2" value="&quot;V100R001C00SPC121B012&quot;" />
+        <item depends="" help="" name="PRODUCT_CFG_FULL_VERSION_STR" type="0x2" value="&quot;DW21_V100R001C00SPC121B012&quot;" />
+        <item depends="" help="" name="PRODUCT_CFG_FILE_VERSION_STR" type="0x2" value="&quot;2.0.1.0&quot;" />
+        <item depends="" help="" name="PRODUCT_CFG_BOOTLOADER_VERSION_STR" type="0x2" value="&quot;0.0.6&quot;" />
+        <item depends="" help="" name="PRODUCT_CFG_VERSION_V" type="0x1" value="100" />
+        <item depends="" help="" name="PRODUCT_CFG_VERSION_R" type="0x1" value="1" />
+        <item depends="" help="" name="PRODUCT_CFG_VERSION_C" type="0x1" value="0" />
+        <item depends="" help="" name="PRODUCT_CFG_VERSION_B" type="0x1" value="12" />
+        <item depends="" help="" name="PRODUCT_CFG_VERSION_SPC" type="0x1" value="121" />
+        <item depends="" help="" name="PRODUCT_CFG_FILE_VER_MAJOR" type="0x1" value="2" />
+        <item depends="" help="" name="PRODUCT_CFG_FILE_VER_MINOR" type="0x1" value="0" />
+        <item depends="" help="" name="PRODUCT_CFG_FILE_VER_REVISION" type="0x1" value="1" />
+        <item depends="" help="" name="PRODUCT_CFG_BUILD_DATE" type="0x2" value="&quot;2022-04-29&quot;" />
+        <item depends="" help="" name="PRODUCT_CFG_BUILD_TIME" type="0x2" value="&quot;10:00:00&quot;" />
+        <item depends="" help="" name="PRODUCT_CFG_BUILD_DATA_TIME" type="0x2" value="&quot;2022-04-29 10:00:00&quot;" />
+    </MODULE>
+    <MODULE name="dev_select" value="no">
+        <item depends="" help="means whether to compile CCO. CNComments:表示是否编译CCO" name="PRODUCT_CFG_PRODUCT_TYPE_CCO" type="0x1" value="no" />
+        <item depends="" help="means whether to compile STA. CNComments:表示是否编译STA" name="PRODUCT_CFG_PRODUCT_TYPE_STA" type="0x1" value="yes" />
+        <item depends="" help="means whether to compile NDM version. CNComments:表示是否编译抄控器版本" name="PRODUCT_CFG_PRODUCT_TYPE_NDM" type="0x1" value="no" />
+    </MODULE>
+    <PROJECT id="100" name="DW21" select="yes">
+        <GROUP>
+            <module dir="boot" name="BOOT" />
+            <module dir="bsp/system/os" name="LITEOS" />
+            <module dir="bsp/drivers" name="DRV" />
+            <module dir="bsp/system" name="SYSTEM" />
+            <module dir="mdm/phy" name="PHY" />
+            <module dir="mdm/mac" name="MAC" />
+            <module dir="mdm/mid" name="MID" />
+            
+            <module dir="app/module_app" name="MODULE_APP" />
+            
+            <module dir="nv/scripts" name="NV" />
+            <module dir="build" name="MAKE_IMAGE" />
+        </GROUP>
+        <APP lib_name="libmodule.a" name="module_app" select="yes" single_radio="no">
+            <NV>
+                <config app_nv_cfg_dir="app/module_app/nv/common" main_scripts="nv/src/mss_nvi_db.xml" name="common" select="yes" />
+            </NV>
+        </APP>
+    </PROJECT>
+</PRODUCT>

@@ -1,0 +1,419 @@
+<CONFIG><MODULE help="" include_name="soc_mdm_app_demo.h" inner_include_name="soc_inner_app_demo.h" is_dyn="yes" lib_name="libdemo.a" name="EXT_MODULE_APP_DEMO" net_attr="separate" open_source="yes" path="app/demo" value="yes">
+		<item depends="" help="" name="PRODUCT_CFG_DEBUG_JTAG_LED_DEMO" type="0x1" value="no" />
+		<item depends="" help="" name="PRODUCT_CFG_DEBUG_CRASH_DEMO" type="0x1" value="no" />
+		<item depends="" help="" name="PRODUCT_CFG_PLC_DEMO_TEST" type="0x1" value="yes" />
+        <DEV name="PRODUCT_CFG_PRODUCT_TYPE_CCO">
+            
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_ST_ADDR" type="0x1" value="0x0" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_SIZE" type="0x1" value="0x4000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_ST_ADDR" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_SIZE" type="0x1" value="0x1000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_ST_ADDR" type="0x1" value="0x5000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_SIZE" type="0x1" value="0x1000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_ST_ADDR" type="0x1" value="0x6000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_SIZE" type="0x1" value="0x1000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_ST_ADDR" type="0x1" value="0x7000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_SIZE" type="0x1" value="0x46000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_ST_ADDR" type="0x1" value="0x4D000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_SIZE" type="0x1" value="0x2C000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_ST_ADDR" type="0x1" value="0x79000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_SIZE" type="0x1" value="0x2000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_ST_ADDR" type="0x1" value="0x7B000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_SIZE" type="0x1" value="0x4000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_ST_ADDR" type="0x1" value="0x7F000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_SIZE" type="0x1" value="0x1000" />
+
+            
+            
+            <item depends="" help="" name="PARTITION_VER_CTL_SUPPORT_ENABLE" type="0x1" value="0x1" />
+            
+            <item depends="" help="" name="PARTITION_VER_CTL_NUM" type="0x1" value="0x2" />
+            
+            <item depends="" help="" name="PARTITION_VER_CTL_COMPATIBLE" type="0x1" value="0x3" />
+
+            
+            
+            <item depends="" help="" name="PARTITION_TRANS_LOG_ENABLE" type="0x1" value="0x0" />
+            
+            <item depends="" help="" name="PARTITION_TRANS_TB_ID" type="0x1" value="6,5,4" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_LOG_TEMP_ADDR" type="0x1" value="0x7D000" />
+        </DEV>
+        <DEV name="PRODUCT_CFG_PRODUCT_TYPE_STA">
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_ST_ADDR" type="0x1" value="0x0" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_SIZE" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_ST_ADDR" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_ST_ADDR" type="0x1" value="0x5000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_ST_ADDR" type="0x1" value="0x6000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_ST_ADDR" type="0x1" value="0x7000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_SIZE" type="0x1" value="0x46000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_ST_ADDR" type="0x1" value="0x4D000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_SIZE" type="0x1" value="0x2C000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_ST_ADDR" type="0x1" value="0x79000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_SIZE" type="0x1" value="0x2000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_ST_ADDR" type="0x1" value="0x7B000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_SIZE" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_ST_ADDR" type="0x1" value="0x7F000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_SIZE" type="0x1" value="0x1000" />
+            
+            <item depends="" help="" name="PARTITION_VER_CTL_SUPPORT_ENABLE" type="0x1" value="0x1" />
+            <item depends="" help="" name="PARTITION_VER_CTL_NUM" type="0x1" value="0x2" />
+            <item depends="" help="" name="PARTITION_VER_CTL_COMPATIBLE" type="0x1" value="0x3" />
+            
+            <item depends="" help="" name="PARTITION_TRANS_LOG_ENABLE" type="0x1" value="0x0" />
+            <item depends="" help="" name="PARTITION_TRANS_TB_ID" type="0x1" value="6,5,4" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_LOG_TEMP_ADDR" type="0x1" value="0x7D000" />
+        </DEV>
+        <DEV name="PRODUCT_CFG_PRODUCT_TYPE_NDM">
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_ST_ADDR" type="0x1" value="0x0" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_SIZE" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_ST_ADDR" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_ST_ADDR" type="0x1" value="0x5000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_ST_ADDR" type="0x1" value="0x6000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_ST_ADDR" type="0x1" value="0x7000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_SIZE" type="0x1" value="0x46000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_ST_ADDR" type="0x1" value="0x4D000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_SIZE" type="0x1" value="0x2C000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_ST_ADDR" type="0x1" value="0x79000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_SIZE" type="0x1" value="0x2000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_ST_ADDR" type="0x1" value="0x7B000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_SIZE" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_ST_ADDR" type="0x1" value="0x7F000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_SIZE" type="0x1" value="0x1000" />
+            
+            <item depends="" help="" name="PARTITION_VER_CTL_SUPPORT_ENABLE" type="0x1" value="0x1" />
+            <item depends="" help="" name="PARTITION_VER_CTL_NUM" type="0x1" value="0x2" />
+            <item depends="" help="" name="PARTITION_VER_CTL_COMPATIBLE" type="0x1" value="0x3" />
+            
+            <item depends="" help="" name="PARTITION_TRANS_LOG_ENABLE" type="0x1" value="0x0" />
+            <item depends="" help="" name="PARTITION_TRANS_TB_ID" type="0x1" value="6,5,4" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_LOG_TEMP_ADDR" type="0x1" value="0x7D000" />
+        </DEV>
+    </MODULE>
+<MODULE help="" include_name="soc_mdm_module_app.h" inner_include_name="soc_inner_module_app.h" is_dyn="yes" lib_name="libmodule_app.a" name="EXT_MODULE_MODULE_APP" net_attr="separate" open_source="yes" path="app/module_app" value="yes">
+		<item depends="" help="" name="PRODUCT_CFG_DEBUG_JTAG_LED_MODULE_APP" type="0x1" value="no" />
+		<item depends="" help="" name="PRODUCT_CFG_DEBUG_CRASH_MODULE_APP" type="0x1" value="no" />
+        <item depends="" help="" name="PRODUCT_CFG_FAST_SEND_DEMO" type="0x1" value="no" />
+		<item depends="" help="" name="PRODUCT_CFG_PLC_MODULE_APP_TEST" type="0x1" value="yes" />
+        <item depends="" help="" name="PRODUCT_CFG_SDK_WHTIE_LIST_SUPPORT" type="0x1" value="no" />
+        <DEV name="PRODUCT_CFG_PRODUCT_TYPE_CCO">
+            
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_ST_ADDR" type="0x1" value="0x0" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_SIZE" type="0x1" value="0x4000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_ST_ADDR" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_SIZE" type="0x1" value="0x1000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_ST_ADDR" type="0x1" value="0x5000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_SIZE" type="0x1" value="0x1000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_ST_ADDR" type="0x1" value="0x6000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_SIZE" type="0x1" value="0x1000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_ST_ADDR" type="0x1" value="0x7000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_SIZE" type="0x1" value="0x46000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_ST_ADDR" type="0x1" value="0x4D000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_SIZE" type="0x1" value="0x2C000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_ST_ADDR" type="0x1" value="0x79000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_SIZE" type="0x1" value="0x2000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_ST_ADDR" type="0x1" value="0x7B000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_SIZE" type="0x1" value="0x4000" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_ST_ADDR" type="0x1" value="0x7F000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_SIZE" type="0x1" value="0x1000" />
+
+            
+            
+            <item depends="" help="" name="PARTITION_VER_CTL_SUPPORT_ENABLE" type="0x1" value="0x1" />
+            
+            <item depends="" help="" name="PARTITION_VER_CTL_NUM" type="0x1" value="0x2" />
+            
+            <item depends="" help="" name="PARTITION_VER_CTL_COMPATIBLE" type="0x1" value="0x3" />
+
+            
+            
+            <item depends="" help="" name="PARTITION_TRANS_LOG_ENABLE" type="0x1" value="0x0" />
+            
+            <item depends="" help="" name="PARTITION_TRANS_TB_ID" type="0x1" value="6,5,4" />
+            
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_LOG_TEMP_ADDR" type="0x1" value="0x7D000" />
+        </DEV>
+        <DEV name="PRODUCT_CFG_PRODUCT_TYPE_STA">
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_ST_ADDR" type="0x1" value="0x0" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_SIZE" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_ST_ADDR" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_ST_ADDR" type="0x1" value="0x5000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_ST_ADDR" type="0x1" value="0x6000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_ST_ADDR" type="0x1" value="0x7000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_SIZE" type="0x1" value="0x46000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_ST_ADDR" type="0x1" value="0x4D000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_SIZE" type="0x1" value="0x2C000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_ST_ADDR" type="0x1" value="0x79000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_SIZE" type="0x1" value="0x2000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_ST_ADDR" type="0x1" value="0x7B000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_SIZE" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_ST_ADDR" type="0x1" value="0x7F000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_SIZE" type="0x1" value="0x1000" />
+            
+            <item depends="" help="" name="PARTITION_VER_CTL_SUPPORT_ENABLE" type="0x1" value="0x1" />
+            <item depends="" help="" name="PARTITION_VER_CTL_NUM" type="0x1" value="0x2" />
+            <item depends="" help="" name="PARTITION_VER_CTL_COMPATIBLE" type="0x1" value="0x3" />
+            
+            <item depends="" help="" name="PARTITION_TRANS_LOG_ENABLE" type="0x1" value="0x0" />
+            <item depends="" help="" name="PARTITION_TRANS_TB_ID" type="0x1" value="6,5,4" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_LOG_TEMP_ADDR" type="0x1" value="0x7D000" />
+        </DEV>
+        <DEV name="PRODUCT_CFG_PRODUCT_TYPE_NDM">
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_ST_ADDR" type="0x1" value="0x0" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_SIZE" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_ST_ADDR" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_ST_ADDR" type="0x1" value="0x5000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_ST_ADDR" type="0x1" value="0x6000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_SIZE" type="0x1" value="0x1000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_ST_ADDR" type="0x1" value="0x7000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_SIZE" type="0x1" value="0x46000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_ST_ADDR" type="0x1" value="0x4D000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_SIZE" type="0x1" value="0x2C000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_ST_ADDR" type="0x1" value="0x79000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_SIZE" type="0x1" value="0x2000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_ST_ADDR" type="0x1" value="0x7B000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_SIZE" type="0x1" value="0x4000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_ST_ADDR" type="0x1" value="0x7F000" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_SIZE" type="0x1" value="0x1000" />
+            
+            <item depends="" help="" name="PARTITION_VER_CTL_SUPPORT_ENABLE" type="0x1" value="0x1" />
+            <item depends="" help="" name="PARTITION_VER_CTL_NUM" type="0x1" value="0x2" />
+            <item depends="" help="" name="PARTITION_VER_CTL_COMPATIBLE" type="0x1" value="0x3" />
+            
+            <item depends="" help="" name="PARTITION_TRANS_LOG_ENABLE" type="0x1" value="0x0" />
+            <item depends="" help="" name="PARTITION_TRANS_TB_ID" type="0x1" value="6,5,4" />
+            <item depends="" help="" name="PRODUCT_CFG_PARTITION_LOG_TEMP_ADDR" type="0x1" value="0x7D000" />
+        </DEV>
+    </MODULE>
+<MODULE help="" include_name="soc_mdm_mrs.h" inner_include_name="soc_inner_mrs.h" is_dyn="yes" lib_name="libmrs.a" name="EXT_MODULE_MRS" net_attr="separate" open_source="yes" path="app/mrs" value="yes">
+	<DEV name="PRODUCT_CFG_PRODUCT_TYPE_CCO">
+		<item depends="" help="" name="PRODUCT_CFG_DEBUG_JTAG_LED_MRS" type="0x1" value="no" />
+        
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_ST_ADDR" type="0x1" value="0x0" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_SIZE" type="0x1" value="0x4000" />
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_ST_ADDR" type="0x1" value="0x4000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_SIZE" type="0x1" value="0x1000" />
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_ST_ADDR" type="0x1" value="0x5000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_SIZE" type="0x1" value="0x1000" />
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_ST_ADDR" type="0x1" value="0x6000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_SIZE" type="0x1" value="0x1000" />
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_ST_ADDR" type="0x1" value="0x7000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_SIZE" type="0x1" value="0x80000" />
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_ST_ADDR" type="0x1" value="0x87000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_SIZE" type="0x1" value="0x4D000" />
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_ST_ADDR" type="0x1" value="0xD4000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_SIZE" type="0x1" value="0x2000" />
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_ST_ADDR" type="0x1" value="0xD6000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_SIZE" type="0x1" value="0x29000" />
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_ST_ADDR" type="0x1" value="0xFF000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_SIZE" type="0x1" value="0x1000" />
+        
+        
+        
+        <item depends="" help="" name="PARTITION_VER_CTL_SUPPORT_ENABLE" type="0x1" value="0x1" />
+        
+        <item depends="" help="" name="PARTITION_VER_CTL_NUM" type="0x1" value="0x2" />
+        
+        <item depends="" help="" name="PARTITION_VER_CTL_COMPATIBLE" type="0x1" value="0x3" />
+        
+        
+        
+        <item depends="" help="" name="PARTITION_TRANS_LOG_ENABLE" type="0x1" value="0x0" />
+        
+        <item depends="" help="" name="PARTITION_TRANS_TB_ID" type="0x1" value="6,5,4" />
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_LOG_TEMP_ADDR" type="0x1" value="0xFD000" />
+	</DEV>
+	<DEV name="PRODUCT_CFG_PRODUCT_TYPE_STA">
+        <item depends="" help="" name="PRODUCT_CFG_DEBUG_JTAG_LED_MRS" type="0x1" value="no" />
+        
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_ST_ADDR" type="0x1" value="0x0" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_SIZE" type="0x1" value="0x4000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_ST_ADDR" type="0x1" value="0x4000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_SIZE" type="0x1" value="0x1000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_ST_ADDR" type="0x1" value="0x5000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_SIZE" type="0x1" value="0x1000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_ST_ADDR" type="0x1" value="0x6000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_SIZE" type="0x1" value="0x1000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_ST_ADDR" type="0x1" value="0x7000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_SIZE" type="0x1" value="0x46000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_ST_ADDR" type="0x1" value="0x4D000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_SIZE" type="0x1" value="0x2C000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_ST_ADDR" type="0x1" value="0x79000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_SIZE" type="0x1" value="0x2000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_ST_ADDR" type="0x1" value="0x7B000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_SIZE" type="0x1" value="0x4000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_ST_ADDR" type="0x1" value="0x7F000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_SIZE" type="0x1" value="0x1000" />
+        
+        <item depends="" help="" name="PARTITION_VER_CTL_SUPPORT_ENABLE" type="0x1" value="0x1" />
+        <item depends="" help="" name="PARTITION_VER_CTL_NUM" type="0x1" value="0x2" />
+        <item depends="" help="" name="PARTITION_VER_CTL_COMPATIBLE" type="0x1" value="0x3" />
+        
+        <item depends="" help="" name="PARTITION_TRANS_LOG_ENABLE" type="0x1" value="0x0" />
+        <item depends="" help="" name="PARTITION_TRANS_TB_ID" type="0x1" value="6,5,4" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_LOG_TEMP_ADDR" type="0x1" value="0x7D000" />
+	</DEV>
+    <DEV name="PRODUCT_CFG_PRODUCT_TYPE_NDM">
+        
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_ST_ADDR" type="0x1" value="0x0" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_BOOT_SIZE" type="0x1" value="0x4000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_ST_ADDR" type="0x1" value="0x4000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM1_SIZE" type="0x1" value="0x1000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_ST_ADDR" type="0x1" value="0x5000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_FTM2_SIZE" type="0x1" value="0x1000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_ST_ADDR" type="0x1" value="0x6000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_FILE_SIZE" type="0x1" value="0x1000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_ST_ADDR" type="0x1" value="0x7000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_KERNEL_SIZE" type="0x1" value="0x46000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_ST_ADDR" type="0x1" value="0x4D000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_UPG_SIZE" type="0x1" value="0x2C000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_ST_ADDR" type="0x1" value="0x79000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_NV_WORK_SIZE" type="0x1" value="0x2000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_ST_ADDR" type="0x1" value="0x7B000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_USER_SIZE" type="0x1" value="0x4000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_ST_ADDR" type="0x1" value="0x7F000" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_CRASH_SIZE" type="0x1" value="0x1000" />
+        
+        <item depends="" help="" name="PARTITION_VER_CTL_SUPPORT_ENABLE" type="0x1" value="0x1" />
+        <item depends="" help="" name="PARTITION_VER_CTL_NUM" type="0x1" value="0x2" />
+        <item depends="" help="" name="PARTITION_VER_CTL_COMPATIBLE" type="0x1" value="0x3" />
+        
+        <item depends="" help="" name="PARTITION_TRANS_LOG_ENABLE" type="0x1" value="0x0" />
+        <item depends="" help="" name="PARTITION_TRANS_TB_ID" type="0x1" value="6,5,4" />
+        <item depends="" help="" name="PRODUCT_CFG_PARTITION_LOG_TEMP_ADDR" type="0x1" value="0x7D000" />
+     </DEV>
+	<item depends="" help="" name="PRODUCT_CFG_DEBUG_CRASH_MRS" type="0x1" value="no" />
+	</MODULE>
+<MODULE help="" include_name="soc_mdm_adc.h" inner_include_name="soc_inner_adc.h" is_dyn="no" lib_name="libadc.o" name="EXT_MODULE_ADC" net_attr="all" open_source="yes" path="bsp/drivers/adc" value="yes" />
+<MODULE help="" include_name="soc_mdm_sys_common.h" inner_include_name="soc_inner_sys_common.h" is_dyn="no" lib_name="libsys_common.o" name="EXT_MODULE_SYS_COMMON" net_attr="all" open_source="yes" path="bsp/drivers/common" value="yes" />
+<MODULE help="" include_name="soc_mdm_datacollect.h" inner_include_name="soc_inner_datacollect.h" is_dyn="yes" lib_name="libdrv_datacollect.a" name="EXT_MODULE_DRV_COLLECTDATA" net_attr="separate" open_source="yes" path="bsp/drivers/datacollect" value="yes">
+	</MODULE>
+<MODULE help="" include_name="soc_mdm_drv_dfx.h" inner_include_name="soc_inner_drv_dfx.h" is_dyn="yes" lib_name="libdrv_dfx.a" name="EXT_MODULE_DRV_DFX" net_attr="separate" open_source="yes" path="bsp/drivers/drv_dfx" value="yes">
+	<item depends="" help="" name="PRODUCT_CFG_MEM_OPERATE" type="0x1" value="no" />
+    <DEV name="PRODUCT_CFG_PRODUCT_TYPE_NDM">
+        <item depends="" help="" name="PRODUCT_CFG_NDM_COLLECT_DATA" type="0x1" value="yes" />
+    </DEV>
+	</MODULE>
+<MODULE help="" include_name="soc_mdm_flash_ram.h" inner_include_name="soc_inner_flash_ram.h" is_dyn="no" lib_name="libflash_ram.o" name="EXT_MODULE_FLASH_RAM" net_attr="all" open_source="yes" path="bsp/drivers/flash_ram" value="yes" />
+<MODULE help="" include_name="soc_mdm_io_config.h" inner_include_name="soc_inner_io_config.h" is_dyn="no" lib_name="libio_config.o" name="EXT_MODULE_IO_CONFIG" net_attr="all" open_source="yes" path="bsp/drivers/io_cfg" value="yes" />
+<MODULE help="" include_name="soc_mdm_pga.h" inner_include_name="soc_inner_pga.h" is_dyn="yes" lib_name="libpga.a" name="EXT_MODULE_PGA" net_attr="all" open_source="yes" path="bsp/drivers/pga" value="yes" />
+<MODULE help="" include_name="soc_mdm_pwm.h" inner_include_name="soc_inner_pwm.h" is_dyn="yes" lib_name="libpwm.a" name="EXT_MODULE_PWM" net_attr="all" open_source="yes" path="bsp/drivers/pwm" value="yes" />
+<MODULE help="" include_name="soc_mdm_raw_timer.h" inner_include_name="soc_inner_raw_timer.h" is_dyn="no" lib_name="libraw_timer.o" name="EXT_MODULE_RAW_TIMER" net_attr="all" open_source="yes" path="bsp/drivers/raw_timer" value="yes" />
+<MODULE help="" include_name="soc_mdm_tsensor.h" inner_include_name="soc_inner_tsensor.h" is_dyn="yes" lib_name="libtsensor.a" name="EXT_MODULE_TSENSOR" net_attr="all" open_source="yes" path="bsp/drivers/tsensor" value="yes">
+	</MODULE>
+<MODULE help="" include_name="soc_mdm_uart.h" inner_include_name="soc_inner_uart.h" is_dyn="no" lib_name="libuart.o" name="EXT_MODULE_UART" net_attr="all" open_source="yes" path="bsp/drivers/uart" value="yes">
+		<item depends="" help="" name="PRODUCT_CFG_UART_INIT_NEW" type="0x1" value="yes" />
+	</MODULE>
+<MODULE help="" include_name="soc_mdm_cpup.h" inner_include_name="soc_inner_cpup.h" is_dyn="yes" lib_name="libcpup.a" name="EXT_MODULE_CPUP" net_attr="all" open_source="yes" path="bsp/system/cpup" value="yes" />
+<MODULE help="" include_name="soc_mdm_nvm.h" inner_include_name="soc_inner_nvm.h" is_dyn="yes" lib_name="libnvm.a" name="EXT_MODULE_NVM" net_attr="all" open_source="yes" path="bsp/system/nvm" value="yes" />
+<MODULE help="" include_name="soc_mdm_partition_table.h" inner_include_name="soc_inner_partition_table.h" is_dyn="no" lib_name="libpartition_table.o" name="EXT_MODULE_PARTITION_TABLE" net_attr="all" open_source="yes" path="bsp/system/partition_table" value="yes" />
+<MODULE help="" include_name="soc_mdm_remap_usr.h" inner_include_name="soc_inner_remap_usr.h" is_dyn="yes" lib_name="libremap_usr.a" name="EXT_MODULE_REMAP_USR" net_attr="all" open_source="yes" path="bsp/system/remap_usr" value="yes">
+		<item depends="" help="" name="PRODUCT_CFG_USR_REMAP_32K" type="0x1" value="yes" />
+		<item depends="" help="" name="PRODUCT_CFG_USR_REMAP_DFX" type="0x1" value="no" />
+		<item depends="" help="" name="PRODUCT_CFG_USR_REMAP_DIAG" type="0x1" value="no" />
+	</MODULE>
+<MODULE help="" include_name="soc_mdm_sys.h" inner_include_name="soc_inner_sys.h" is_dyn="yes" lib_name="libsys.a" name="EXT_MODULE_SYS" net_attr="separate" open_source="yes" path="bsp/system/sys" value="yes">
+		<item depends="" help="" name="PRODUCT_CFG_SYS_REBOOT_DELAY" type="0x1" value="2000" />
+	</MODULE>
+<MODULE help="" include_name="" inner_include_name="" is_dyn="" lib_name="" name="overall" net_attr="" open_source="yes" path="" value="yes">
+        
+        <item depends="" help="means whether dynamic loading is supported" name="REMAP_CFLAGS" type="0x0" value=" -DUSE_REMAP -DREMAP_WITH_LRU -DREMAP_SECTOR_32K " />
+        <item depends="" help="means whether Romization is supported" name="ROM_CFLAGS" type="0x0" value=" -DUSE_ROM " />
+        <item depends="" help="C Language basic compile option. CNComments: C语言基础编译选项" name="MAIN_CFLAGS" type="0x0" value=" -nostdinc -falign-functions=4 -fno-aggressive-loop-optimizations -fno-builtin  -gdwarf-2 -std=c99 -Wpointer-arith -Wstrict-prototypes -mno-thumb-interwork  -ffunction-sections -fdata-sections -fno-exceptions -fstack-protector-strong  -fno-short-enums -fno-common -fno-delete-null-pointer-checks -fsigned-char -freg-struct-return -fvisibility=hidden -fno-strict-aliasing -pipe -mcpu=cortex-m3 -mthumb  -DCYGPKG_POSIX_SIGNALS  -D__ECOS__   -D__RTOS_ -O2 " />
+        <item depends="" help="means the compile alarm option configuration. CNComments: 表示编译报警选项配置" name="WARNNING_CFLAGS" type="0x0" value=" -W -Wall -Wundef -Werror -Wdate-time -Wextra -Wfloat-equal -Wformat=2 -Wshadow -Wtrampolines" />
+        <item depends="" help="Statistics of dynamic memory usage by BSP, MAC and APP. CNComments: 按BSP,MAC,APP统计动态内存使用情况开关" name="MEM_DEBUG_CFLAGS" type="0x0" value=" -D__MEM_HEAP_STAT_PATCH__ " />
+        <item depends="" help="commission compile option. CNComments: 调测编译选项" name="DEBUG_CFLAGS" type="0x0" value=" -g " />
+        <item depends="" help="default compile option for assembling file. CNComments: 汇编文件默认编译选项" name="MAIN_ASFLAGS" type="0x0" value=" -mcpu=cortex-m3 -mthumb " />
+        <item depends="" help="" name="HB_SAVE_COMPILE_LOG_ENABLE" type="0x0" value="" />
+        <item depends="" help="" name="CFLAGS" type="0x0" value="$(MAIN_CFLAGS) $(WARNNING_CFLAGS) $(REMAP_CFLAGS) $(ROM_CFLAGS)" />
+        <item depends="" help="" name="ASFLAGS" type="0x0" value="$(MAIN_ASFLAGS)" />
+
+        
+        <item depends="" help="" name="RM" type="0x0" value="rm -rf" />
+        <item depends="" help="" name="MAKE" type="0x0" value="make" />
+        <item depends="" help="" name="MV" type="0x0" value="mv" />
+        <item depends="" help="" name="MAKE_DIR" type="0x0" value="mkdir -p" />
+        
+        <item depends="" help="" name="Q" type="0x0" value="@" />
+        
+        <item depends="" help="" name="ARFLAGS" type="0x0" value="cr" />
+
+        
+	<item depends="" help="" name="CROSS_COMPILE_DIR" type="0x0" value="$(MAIN_TOPDIR)/tools/toolchains/gcc-arm-none-eabi-10.3-2021.07/bin" />
+	<item depends="" help="" name="CROSS_COMPILE" type="0x0" value="$(CROSS_COMPILE_DIR)/arm-none-eabi-" />
+        <item depends="" help="" name="CC" type="0x0" value="$(CROSS_COMPILE)gcc" />
+        <item depends="" help="" name="AS" type="0x0" value="$(CROSS_COMPILE)as" />
+        <item depends="" help="" name="AR" type="0x0" value="$(CROSS_COMPILE)ar" />
+        <item depends="" help="" name="LD" type="0x0" value="$(CROSS_COMPILE)ld" />
+        <item depends="" help="" name="OBJCOPY" type="0x0" value="$(CROSS_COMPILE)objcopy" />
+        <item depends="" help="" name="OBJDUMP" type="0x0" value="$(CROSS_COMPILE)objdump" />
+
+        
+        <item depends="" help="" name="PRODUCT_CFG_FEATURE_NVM" type="0x1" value="YES" />
+        <item depends="" help="" name="PRODUCT_CFG_FEATURE_MAC_TASK" type="0x1" value="YES" />
+        <item depends="" help="" name="PRODUCT_CFG_SUPPORT_UPG" type="0x1" value="YES" />
+        <item depends="" help="means whether _U is supported. CNComments: 表示是否支持_U" name="PRODUCT_CFG_SUPPORT_CONFIG_VARIABLE" type="0x1" value="YES" />
+        <item depends="" help="" name="PRODUCT_CFG_SUPPORT_FLASH_PROTECT" type="0x1" value="YES" />
+        <item depends="" help="" name="PRODUCT_CFG_MCORE_RAM_LOW_ADDR" type="0x1" value="0x02000000" />
+        <item depends="" help="" name="PRODUCT_CFG_FLASH_BLOCK_SIZE" type="0x1" value="0x1000" />
+        <item depends="" help="whole concentrator detection, cross network management and link layer. CNComments:整集中器检测，跨网管和链路层" name="PRODUCT_CFG_FEATURE_STA_CONCENTRATOR_CHECK" type="0x1" value="NO" />
+        <item depends="" help="" name="PRODUCT_CFG_PRINT_UART0" type="0x1" value="NO" />
+        <item depends="" help="" name="EXT_UPG_DEBUG_PRINTF" type="0x1" value="NO" />
+        <item depends="" help="Boot magic word. Influence: factory file upgrade. CNComments: Boot魔术字。影响：厂家文件升级" name="PRODUCT_CFG_BOOT_VER_MAGIC" type="0x1" value="0x12121213" />
+        <item depends="" help="Chip magic word. Influence: factory file upgrade. CNComments:芯片魔术字。影响：厂家文件升级" name="PRODUCT_CFG_CHIP_MAGIC" type="0x1" value="0x57555557" />
+        <item depends="" help="sta upg from dbk" name="PRODUCT_CFG_SUPPORT_UPG_FROM_DBK" type="0x1" value="YES" />
+        <item depends="" help="" name="PRODUCT_CFG_SUPPORT_DEEP_SLEEP" type="0x1" value="YES" />
+        
+        <item depends="" help="factory product code. Influence: factory file upgrade. CNComments:厂家产品代码。影响：厂家文件升级" name="PRODUCT_CFG_MANUCODE" type="0x1" value="0x5744" />
+        <item depends="" help="upgrade the end of file magic word. Influence:content of upgrading file tail, and factory upgrade. CNComments:升级文件尾魔术字。影响:升级文件尾部内容,厂家升级" name="PRODUCT_CFG_UPG_FILE_END_SIGNATURE" type="0x1" value="0x57555557" />
+        <item depends="" help="whether to perform RSA signature verification when booting the kernel and upgrading. CNComments:引导kernel和升级时是否进行RSA签名验证" name="PRODUCT_CFG_SECURE_UPG" type="0x1" value="YES" />
+
+    </MODULE>
+
+<MODULE help="" include_name="soc_mdm_mbedtls.h" inner_include_name="soc_inner_mbedtls.h" is_dyn="yes" lib_name="libmbedtls.a" name="EXT_MODULE_MBEDTLS" net_attr="all" open_source="yes" path="mdm/mac/mbedtls" value="yes" />
+<MODULE help="" include_name="soc_mdm_upg_21.h" inner_include_name="soc_inner_upg_21.h" is_dyn="yes" lib_name="libupg_21.a" name="EXT_MODULE_UPG_21" net_attr="separate" open_source="yes" path="mdm/mid/upg_21" value="yes" />
+<MODULE help="" include_name="soc_mdm_upg_trans_file.h" inner_include_name="soc_inner_upg_trans_file.h" is_dyn="yes" lib_name="libupg_trans_file.a" name="EXT_MODULE_UPG_TRANS_FILE" net_attr="separate" open_source="yes" path="mdm/mid/upg_trans_file" value="yes" />
+<MODULE help="" include_name="soc_mdm_plc_freq.h" inner_include_name="soc_inner_plc_freq.h" is_dyn="yes" lib_name="libplc_freq.a" name="EXT_MODULE_PLC_FREQ" net_attr="separate" open_source="yes" path="mdm/phy/plc_freq" value="yes" />
+<MODULE help="" include_name="" inner_include_name="" is_dyn="" lib_name="" name="EXT_MODULE_NV" net_attr="" open_source="yes" path="" value="no" />
+<MODULE help="" include_name="" inner_include_name="" is_dyn="" lib_name="" name="EXT_MODULE_DBK" net_attr="" open_source="no" path="" value="no" />
+</CONFIG>

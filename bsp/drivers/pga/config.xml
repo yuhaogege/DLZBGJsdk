@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CONFIG>
+	<!--name module macro name -->
+	<!--value indicates whether this feature is supported -->
+	<!--open_source indicates whether open source -->
+	<!--path directory where the module is -->
+	<!--net_attr Network configuration, optional value all/separate, separate means to distinguish CCO/STA multiple compilation, all means to compile only once -->
+	<!--lib_name indicates the library name corresponding to this module -->
+	<!--include_name indicates the external interface description provided by this module -->
+	<!--inner_include_name indicates the inter-module interface description provided by this module -->
+	<!--is_dyn means dynamic loading or fixed storage. If no is selected, it means fixed storage, the library name extension needs to be *.o; if yes, it means dynamic loading, the library name extension is *.a-->
+
+	<MODULE name="EXT_MODULE_PGA" value="yes" open_source="yes" path="bsp/drivers/pga" net_attr="all" lib_name="libpga.a" include_name="soc_mdm_pga.h" inner_include_name="soc_inner_pga.h" is_dyn="yes" help=""></MODULE>
+</CONFIG>

@@ -1,0 +1,53 @@
+
+
+export DBK_PATH=$(MAIN_TOPDIR)/tools/dbk
+include $(MAIN_TOPDIR)/build_tmp/config/soc_product_config.mk
+export HB_DEBUG_COMPILE_ENABLE
+
+
+ifeq ($(PRODUCT_CFG_BUILD_RELEASE), yes)
+export DEBUG_OR_RELEASE:=ReleaseA
+else
+export DEBUG_OR_RELEASE:=DebugA
+endif
+
+
+ifeq ($(DEBUG_OR_RELEASE), DebugA)
+export DEBUG_OR_RELEASE_PATH_SECTION:=$(project_name)_debug
+else
+export DEBUG_OR_RELEASE_PATH_SECTION:=$(project_name)_release
+endif
+
+export MSBUILD=C:/Windows/Microsoft.NET/Framework/v4.0.30319/msbuild.exe
+#MSBUILD=msbuild.exe
+
+
+export TMP_PATH = $(MAIN_TOPDIR)/build_tmp
+
+export TARGET_PATH=$(MAIN_TOPDIR)/output
+export IMAGE_PATH=$(TARGET_PATH)/$(DEBUG_OR_RELEASE_PATH_SECTION)/image
+
+export INTERMEDIATE_PATH=$(TARGET_PATH)/$(DEBUG_OR_RELEASE_PATH_SECTION)/obj/dbk/setup/intermediate
+
+
+export TARGET_DELIVERY_RELEASE_PATH=$(TARGET_PATH)/$(DEBUG_OR_RELEASE_PATH_SECTION)
+export TMP_DELIVERY_RELEASE_PATH = $(TMP_PATH)/$(DEBUG_OR_RELEASE_PATH_SECTION)
+
+# export MAKESCRIPT_SETUP_PATH=$(DBK_PATH)/makescript/setup
+
+#INNO_EXE_PATH=D:/HB_LiteOS_V1R3B035/target/socbuilder/tools/setup/Inno
+#export INNO_EXE_PATH=$(TARGET_PATH)/socbuilder/tools/setup/Inno
+# export ISCC_FULL_PATH=$(INNO_EXE_PATH)/iscc.exe
+
+export TARGET_DELIVERY_RELEASE_SETUP_PATH=$(TARGET_DELIVERY_RELEASE_PATH)/obj/dbk/setup
+export TARGET_DELIVERY_RELEASE_SETUP_BIN_PATH=$(TARGET_DELIVERY_RELEASE_SETUP_PATH)/bin
+
+export TARGET_CONFIG_PATH=$(TARGET_PATH)/config
+
+
+
+export IMAGE_PATH=$(TARGET_DELIVERY_RELEASE_PATH)/image
+
+export BUILD_DATE_TIME="`date "+%Y-%m-%d %H:%M:%S"`"
+
+export SCRIPT_TOP_PATH=$(DBK_PATH)/makescript/v10_p

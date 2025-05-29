@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) CompanyNameMagicTag 2018-2019. All rights reserved.
+ * Description: os struct def.
+ * Author: CompanyName
+ * Create: 2018-10-31
+ */
+
+#define SOC_TYPES_H
+#define EXT_START_HEADER
+#define EXT_END_HEADER
+#include "soc_product_config.h"
+#include "soc_mdm_types.h"
+#include "dbk_hdb_common.h"
+#include "soc_config.h"
+#include "dfx_low_power.h"
+#include "drv_dfx.h"
+#include "dfx_cpup.h"
+#include "dfx_track.h"
+#include "dfx_uart.h"
+#include "soc_mdm_mem.h"
+#include "soc_mdm_os_stat.h"
+#include "dfx_upg_base.h"
+#include "dfx_remap.h"
