@@ -1,0 +1,42 @@
+all:
+	@echo generating hdb...
+
+#destination path: \output\DW21_Release\CCO\hdb
+	@echo HB_PRODUCT_NAME_LIST=CCO
+	make -f $(MAIN_TOPDIR)/build/hdb/mk_hdb_main.mk HB_PRODUCT_NAME_LIST:=cco HB_DEBUG_COMPILE_ENABLE:=$(HB_DEBUG_COMPILE_ENABLE) HB_PROJECT_NAME_LIST=$(HB_PROJECT_NAME_LIST)
+	
+	@echo HB_PRODUCT_NAME_LIST=STA
+	make -f $(MAIN_TOPDIR)/build/hdb/mk_hdb_main.mk HB_PRODUCT_NAME_LIST:=sta HB_DEBUG_COMPILE_ENABLE:=$(HB_DEBUG_COMPILE_ENABLE) HB_PROJECT_NAME_LIST=$(HB_PROJECT_NAME_LIST)
+	
+	@echo HB_PRODUCT_NAME_LIST=NDM
+	make -f $(MAIN_TOPDIR)/build/hdb/mk_hdb_main.mk HB_PRODUCT_NAME_LIST:=ndm HB_DEBUG_COMPILE_ENABLE:=$(HB_DEBUG_COMPILE_ENABLE) HB_PROJECT_NAME_LIST=$(HB_PROJECT_NAME_LIST)
+	
+#copy to $(TARGET_DELIVERY_RELEASE_PATH)/database/
+	# copy hdb config to target. 
+	$(foreach X,$(HB_APP_NAME_LIST),\
+	$(foreach Y,$(HB_DEV_LIST),\
+	mkdir -p $(TARGET_DELIVERY_RELEASE_PATH)/database/$(X)/$(Y)/system;\
+	cp -r $(TMP_DELIVERY_RELEASE_PATH)/$(Y)/hdb/* $(TARGET_DELIVERY_RELEASE_PATH)/database/$(X)/$(Y)/system;\
+	cp -r $(TMP_DELIVERY_RELEASE_PATH)/$(Y)/nv/$(X)/mss_nvi_db.xml $(TARGET_DELIVERY_RELEASE_PATH)/database/$(X)/$(Y)/system/hdbcfg;))
+    
+	# generate hdb ver.
+	$(foreach X,$(HB_APP_NAME_LIST),\
+	python3 GeHdbVer.py $(TARGET_DELIVERY_RELEASE_PATH)/database/$(X);)
+
+# dbk config check. 
+check:
+	@$(foreach X,$(HB_APP_NAME_LIST),\
+	if [ ! -f  $(TARGET_DELIVERY_RELEASE_PATH)/database/$(X)/database_ver.txt ] ; \
+	then \
+	echo -n "HB BUILD dbk_config [FAILURE]"; \
+	fi; )
+	@echo -n "HB BUILD dbk_config [SUCCESS]" ;\
+	
+	
+	
+clean:
+	-rm -rf $(TARGET_DELIVERY_RELEASE_PATH)/database/
+	
+	
+	
+	

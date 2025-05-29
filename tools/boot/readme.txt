@@ -1,0 +1,1 @@
+MakeFlashBootTool -i input_bin -o output_bin -ver version -rootkey root_pri_key_path -subkey sub_pri_key_path -compress_flag 0(Uncompressed)/1(Compressed)

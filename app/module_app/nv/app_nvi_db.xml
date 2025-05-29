@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--CompanyNameMagicTag-->
+<!--definition of NV ID-->
+<!--V1.0-->
+<SourceData>
+  <GROUP NAME="MODULE_APP" ID="0x4" FEATURE="1&lt;&lt;0,1&lt;&lt;4,1&lt;&lt;5" USEDMODE="0" PARAM_DEF_FILE="../nv/nv_app_struct_def.txt" MODE="LTE">
+    <NV ID="0xB1" NAME="app_identify" PARAM_NAME="module_cco_identify_inf" PARAM_VALUE="{0,10,5,0,2000}" CATEGORY="APP" DEV="CCO" BROADCAST="0" DESCRIPTION="module_app network identify"></NV>
+  </GROUP>
+</SourceData>

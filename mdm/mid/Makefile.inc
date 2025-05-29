@@ -1,0 +1,15 @@
+bsp/inc
+mdm/inc
+mdm/mac/inc
+mdm/mid/include
+mdm/mid/common
+mdm/mid/nv_rw
+mdm/mid/diag
+mdm/mid/ndm
+mdm/mac/network/management
+mdm/mac/link_layer/tx
+rom/mdm/phy/inc
+mdm/phy/inc
+bsp/system/inc
+mdm/mid/upg_trans_file
+mdm/mid/upg_21

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<CONFIG>
+	<!--name 模块宏名-->
+	<!--value 表示是否支持此功能,用于生成.h和.mk-->
+	<!--open_source 表示是否开源,影响SDK是否要拷贝-->
+	<!--path 模块所在目录-->
+	<!--net_attr 组网形态，可选值all/separate,separate表示区分CCO/STA多次编译，all表示仅编译一次-->
+	<!--lib_name 表示本模块对应的库名-->
+	<!--include_name 表示本模块提供的对外接口说明-->
+	<!--inner_include_name 表示本模块提供的模块间接口说明-->
+	<!--is_dyn 表示动态加载还是固定存储，如果选择no，表示固定存储，库名扩展名需要为*.o;如果选择yes,表示动态加载，库名扩展名为*.a-->
+	<MODULE name="EXT_MODULE_DBK" value="no" open_source="no" path="" net_attr="" lib_name="" include_name="" inner_include_name="" is_dyn="" help=""></MODULE>
+</CONFIG>

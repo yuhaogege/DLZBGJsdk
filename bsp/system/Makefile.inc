@@ -1,0 +1,16 @@
+bsp/inc
+mdm/inc
+mdm/mac/inc
+rom/mdm/phy/inc
+mdm/phy/inc
+bsp/system/inc
+bsp/system/sys
+bsp/system/cfg
+bsp/system/nvm
+bsp/system/partition_table
+bsp/system/dms
+bsp/drivers/uart
+bsp/system/drv_dfx
+bsp/system/remap_dll
+bsp/drivers/flash_ram
+target/socbuilder/cfg

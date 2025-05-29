@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!--type="0x0" means only generated to mk file-->
+<!--type="0x1" means only generated to the header file-->
+<!--type="0x2" means that the header file and the MAKE file are generated-->
+<CONFIG>
+    <MODULE name="overall" value="yes" open_source="yes" path="" net_attr="" lib_name="" include_name="" inner_include_name="" is_dyn="" help="">
+        <!--Compile options-->
+        <item type="0x0"  name = "REMAP_CFLAGS" value = " -DUSE_REMAP -DREMAP_WITH_LRU -DREMAP_SECTOR_32K " depends ="" help="means whether dynamic loading is supported" ></item>
+        <item type="0x0"  name = "ROM_CFLAGS" value = " -DUSE_ROM " depends ="" help="means whether Romization is supported" ></item>
+        <item type="0x0"  name = "MAIN_CFLAGS" value = " -nostdinc -falign-functions=4 -fno-aggressive-loop-optimizations -fno-builtin  -gdwarf-2 -std=c99 -Wpointer-arith -Wstrict-prototypes -mno-thumb-interwork  -ffunction-sections -fdata-sections -fno-exceptions -fstack-protector-strong  -fno-short-enums -fno-common -fno-delete-null-pointer-checks -fsigned-char -freg-struct-return -fvisibility=hidden -fno-strict-aliasing -pipe -mcpu=cortex-m3 -mthumb  -DCYGPKG_POSIX_SIGNALS  -D__ECOS__   -D__RTOS_ -O2 " depends ="" help="C Language basic compile option. CNComments: C语言基础编译选项" ></item>
+        <item type="0x0"  name = "WARNNING_CFLAGS" value = " -W -Wall -Wundef -Werror -Wdate-time -Wextra -Wfloat-equal -Wformat=2 -Wshadow -Wtrampolines" depends ="" help="means the compile alarm option configuration. CNComments: 表示编译报警选项配置" ></item>
+        <item type="0x0"  name = "MEM_DEBUG_CFLAGS" value = " -D__MEM_HEAP_STAT_PATCH__ " depends ="" help="Statistics of dynamic memory usage by BSP, MAC and APP. CNComments: 按BSP,MAC,APP统计动态内存使用情况开关" ></item>
+        <item type="0x0"  name = "DEBUG_CFLAGS" value = " -g " depends ="" help="commission compile option. CNComments: 调测编译选项" ></item>
+        <item type="0x0"  name = "MAIN_ASFLAGS" value = " -mcpu=cortex-m3 -mthumb " depends ="" help="default compile option for assembling file. CNComments: 汇编文件默认编译选项" ></item>
+        <item type="0x0"  name = "HB_SAVE_COMPILE_LOG_ENABLE" value = "" depends ="" help="" ></item>
+        <item type="0x0"  name = "CFLAGS" value = "$(MAIN_CFLAGS) $(WARNNING_CFLAGS) $(REMAP_CFLAGS) $(ROM_CFLAGS)" depends ="" help="" ></item>
+        <item type="0x0"  name = "ASFLAGS" value = "$(MAIN_ASFLAGS)" depends ="" help="" ></item>
+
+        <!--Common shell commands. CNComments: 常用shell命令-->
+        <item type="0x0"  name = "RM" value = "rm -rf" depends ="" help="" ></item>
+        <item type="0x0"  name = "MAKE" value = "make" depends ="" help="" ></item>
+        <item type="0x0"  name = "MV" value = "mv" depends ="" help="" ></item>
+        <item type="0x0"  name = "MAKE_DIR" value = "mkdir -p" depends ="" help="" ></item>
+        <!--Turn off the display and configure it to be empty. CNComments: 关闭显示则配置为空-->
+        <item type="0x0"  name = "Q" value = "@" depends ="" help="" ></item>
+        <!--Configured to save all LOG = ALL, only save error LOG = ERR, and not save LOG = NO. CNComments: 配置为保存所有LOG = ALL ，仅保存错误LOG = ERR，不保存LOG = NO -->
+        <item type="0x0"  name = "ARFLAGS" value = "cr" depends ="" help="" ></item>
+
+        <!--Compile and build tool directory. CNComments:编译构建工具目录 -->
+	<item type="0x0"  name = "CROSS_COMPILE_DIR" value = "$(MAIN_TOPDIR)/tools/toolchains/gcc-arm-none-eabi-10.3-2021.07/bin" depends ="" help="" ></item>
+	<item type="0x0"  name = "CROSS_COMPILE" value = "$(CROSS_COMPILE_DIR)/arm-none-eabi-" depends ="" help="" ></item>
+        <item type="0x0"  name = "CC" value = "$(CROSS_COMPILE)gcc" depends ="" help="" ></item>
+        <item type="0x0"  name = "AS" value = "$(CROSS_COMPILE)as" depends ="" help="" ></item>
+        <item type="0x0"  name = "AR" value = "$(CROSS_COMPILE)ar" depends ="" help="" ></item>
+        <item type="0x0"  name = "LD" value = "$(CROSS_COMPILE)ld" depends ="" help="" ></item>
+        <item type="0x0"  name = "OBJCOPY" value = "$(CROSS_COMPILE)objcopy" depends ="" help="" ></item>
+        <item type="0x0"  name = "OBJDUMP" value = "$(CROSS_COMPILE)objdump" depends ="" help="" ></item>
+
+        <!--global macro. CNComments: 全局宏 -->
+        <item type="0x1"  name = "PRODUCT_CFG_FEATURE_NVM" value = "YES" depends ="" help="" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_FEATURE_MAC_TASK" value = "YES" depends ="" help="" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_SUPPORT_UPG" value = "YES" depends ="" help="" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_SUPPORT_CONFIG_VARIABLE" value = "YES" depends ="" help="means whether _U is supported. CNComments: 表示是否支持_U" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_SUPPORT_FLASH_PROTECT" value = "YES" depends ="" help="" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_MCORE_RAM_LOW_ADDR" value = "0x02000000" depends ="" help="" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_FLASH_BLOCK_SIZE" value = "0x1000" depends ="" help="" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_FEATURE_STA_CONCENTRATOR_CHECK" value = "NO" depends ="" help="whole concentrator detection, cross network management and link layer. CNComments:整集中器检测，跨网管和链路层" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_PRINT_UART0" value = "NO" depends ="" help="" ></item>
+        <item type="0x1"  name = "EXT_UPG_DEBUG_PRINTF" value = "NO" depends ="" help="" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_BOOT_VER_MAGIC" value = "0x12121213" depends ="" help="Boot magic word. Influence: factory file upgrade. CNComments: Boot魔术字。影响：厂家文件升级" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_CHIP_MAGIC" value = "0x57555557" depends ="" help="Chip magic word. Influence: factory file upgrade. CNComments:芯片魔术字。影响：厂家文件升级" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_SUPPORT_UPG_FROM_DBK" value = "YES" depends ="" help="sta upg from dbk" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_SUPPORT_DEEP_SLEEP" value = "YES" depends ="" help="" ></item>
+        <!-- global macro, user can modify. CNComments:全局宏 用户修改 -->
+        <item type="0x1"  name = "PRODUCT_CFG_MANUCODE" value = "0x5744" depends ="" help="factory product code. Influence: factory file upgrade. CNComments:厂家产品代码。影响：厂家文件升级" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_UPG_FILE_END_SIGNATURE" value = "0x57555557" depends ="" help="upgrade the end of file magic word. Influence:content of upgrading file tail, and factory upgrade. CNComments:升级文件尾魔术字。影响:升级文件尾部内容,厂家升级" ></item>
+        <item type="0x1"  name = "PRODUCT_CFG_SECURE_UPG" value = "YES" depends ="" help="whether to perform RSA signature verification when booting the kernel and upgrading. CNComments:引导kernel和升级时是否进行RSA签名验证" ></item>
+
+    </MODULE>
+
+</CONFIG>

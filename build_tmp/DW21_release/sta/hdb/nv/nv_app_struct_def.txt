@@ -1,0 +1,66 @@
+#include "base_datatype_def.txt"typedef struct {
+    td_u8 dev_addr[EXT_PLC_MAC_ADDR_LEN];
+    td_u8 rsv[10];
+} app_dev_addr_inf;
+
+typedef struct {
+    td_u32 filc_crc;
+    td_u8 file_attr;
+    td_u8 rsv[3];
+} app_upg_inf;
+
+typedef struct {
+    td_u8 simu_meter;
+    td_u8 simu_evt;
+    td_u8 simu_evt_delay;
+    td_u8 rsv;
+} mrs_simu_meter_inf;
+
+typedef struct {
+    td_u32 identify_duration;
+    td_u32 report_duration;
+
+    td_u16 start_cmd_interval;
+
+
+    td_u16 stop_cmd_interval;
+
+
+
+    td_u16 delay_white_list_duration;
+    td_u16 query_sta_interval;
+
+    td_u16 refrash_topo_interval;
+    td_u16 query_sta_max_way;
+
+    td_u8 query_sta_timeout;
+
+    td_u8 query_max_cnt;
+
+
+    td_u8 identify_duration_rate;
+    td_u8 pad2;
+} mrs_cco_tf_inf;
+
+typedef struct {
+    td_u16 tf_check_period;
+
+    td_u16 tf_stop_while_not_receive;
+
+    td_u16 tf_unlock_while_leave_network;
+
+    td_u16 tf_start_interval;
+
+
+} mrs_sta_tf_inf;
+
+
+typedef struct {
+    td_u8 is_network_idf_enable;
+    td_u8 wait_new_sta_max_time;
+    td_u8 parallel_num;
+    td_u8 rvsd;
+
+
+    td_u32 time_diff;
+} module_cco_identify_inf;

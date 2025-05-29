@@ -1,0 +1,60 @@
+<PRODUCT name="DW21">
+    <PROJECT name="DW21">
+        <APP ID="0x1" MODE="HCT" NAME="DEMO" PARAM_DEF_FILE="">
+            
+            <Prod CFG_FILE="boot" ID="flash_boot" NAME="flashboot upgrade file. CNComments: flashboot升级文件" SRC_NAME="dw21_flash_boot_secure_flash.bin" TYPE="bootupg" />
+
+            
+            
+            
+            
+            <Prod CFG_FILE="cco" DEV="CCO" ID="common_cco" NAME="CCO product form. CNComments: CCO产品形态" SRC_NAME="dw21_cco_demo.bin,demo_common_cco_demo_normal.hnv,cco_flash_partition_table.bin" TYPE="hupg" />
+            <Prod CFG_FILE="sta" DEV="STA" ID="common_sta" NAME="STA product form. CNComments: STA产品形态" SRC_NAME="dw21_sta_demo.bin,demo_common_sta_demo_normal.hnv,sta_flash_partition_table.bin" TYPE="hupg" />
+            <Prod CFG_FILE="ndm" DEV="NDM" ID="common_ndm" NAME="NDM product form. CNComments: NDM产品形态" SRC_NAME="dw21_ndm_demo.bin,demo_common_ndm_demo_normal.hnv,ndm_flash_partition_table.bin" TYPE="hupg" />
+
+            
+            
+            
+            
+            <Prod CFG_FILE="cco" DEV="CCO" ID="common_cco" IS_SECURE_BOOT="TRUE" NAME="CCO product form. CNComments: CCO产品形态" SRC_NAME="dw21_flash_boot_secure_flash.bin,demo_common_cco_demo_factory.hnv,demo_common_cco_demo_normal.hnv,dw21_cco_demo.bin" TYPE="hbin" />
+            <Prod CFG_FILE="sta" DEV="STA" ID="common_sta" IS_SECURE_BOOT="TRUE" NAME="STA product form. CNComments: STA产品形态" SRC_NAME="dw21_flash_boot_secure_flash.bin,demo_common_sta_demo_factory.hnv,demo_common_sta_demo_normal.hnv,dw21_sta_demo.bin" TYPE="hbin" />
+            <Prod CFG_FILE="ndm" DEV="NDM" ID="common_ndm" IS_SECURE_BOOT="TRUE" NAME="NDM product form. CNComments: NDM产品形态" SRC_NAME="dw21_flash_boot_secure_flash.bin,demo_common_ndm_demo_factory.hnv,demo_common_ndm_demo_normal.hnv,dw21_ndm_demo.bin" TYPE="hbin" />
+
+            
+            </APP>
+        <APP ID="0x1" MODE="HCT" NAME="MODULE_APP" PARAM_DEF_FILE="">
+            
+            <Prod CFG_FILE="cco" DEV="CCO" ID="common_cco" NAME="CCO product form. CNComments: CCO产品形态" SRC_NAME="dw21_cco_module_app.bin,module_app_common_cco_module_app_normal.hnv,cco_flash_partition_table.bin" TYPE="hupg" />
+            <Prod CFG_FILE="sta" DEV="STA" ID="common_sta" NAME="STA product form. CNComments: STA产品形态" SRC_NAME="dw21_sta_module_app.bin,module_app_common_sta_module_app_normal.hnv,sta_flash_partition_table.bin" TYPE="hupg" />
+            <Prod CFG_FILE="ndm" DEV="NDM" ID="common_ndm" NAME="NDM product form. CNComments: NDM产品形态" SRC_NAME="dw21_ndm_module_app.bin,module_app_common_ndm_module_app_normal.hnv,ndm_flash_partition_table.bin" TYPE="hupg" />
+            
+            
+            
+            
+            
+            <Prod CFG_FILE="cco" DEV="CCO" ID="common_cco" IS_SECURE_BOOT="TRUE" NAME="CCO product form. CNComments: CCO产品形态" SRC_NAME="dw21_flash_boot_secure_flash.bin,module_app_common_cco_module_app_factory.hnv,module_app_common_cco_module_app_normal.hnv,dw21_cco_module_app.bin" TYPE="hbin" />
+            <Prod CFG_FILE="sta" DEV="STA" ID="common_sta" IS_SECURE_BOOT="TRUE" NAME="STA product form. CNComments: STA产品形态" SRC_NAME="dw21_flash_boot_secure_flash.bin,module_app_common_sta_module_app_factory.hnv,module_app_common_sta_module_app_normal.hnv,dw21_sta_module_app.bin" TYPE="hbin" />
+            <Prod CFG_FILE="ndm" DEV="NDM" ID="common_ndm" IS_SECURE_BOOT="TRUE" NAME="NDM product form. CNComments: NDM产品形态" SRC_NAME="dw21_flash_boot_secure_flash.bin,module_app_common_ndm_module_app_factory.hnv,module_app_common_ndm_module_app_normal.hnv,dw21_ndm_module_app.bin" TYPE="hbin" />
+
+            
+            </APP>
+        <APP ID="0x1" MODE="HCT" NAME="MRS" PARAM_DEF_FILE="">
+            
+            <Prod CFG_FILE="cco" DEV="CCO" ID="common_cco" NAME="CCO product form. CNComments: CCO产品形态" SRC_NAME="dw21_cco_mrs.bin,mrs_common_cco_mrs_normal.hnv,cco_flash_partition_table.bin" TYPE="hupg" />
+            <Prod CFG_FILE="sta" DEV="STA" ID="common_sta" NAME="STA product form. CNComments: STA产品形态" SRC_NAME="dw21_sta_mrs.bin,mrs_common_sta_mrs_normal.hnv,sta_flash_partition_table.bin" TYPE="hupg" />
+            <Prod CFG_FILE="sta" DEV="STA" ID="common_relay" NAME="Relay product form. CNComments: 中继产品形态" SRC_NAME="dw21_sta_mrs.bin,mrs_common_relay_mrs_normal.hnv,sta_flash_partition_table.bin" TYPE="hupg" />
+            <Prod CFG_FILE="ndm" DEV="NDM" ID="common_ndm" NAME="NDM product form. CNComments: NDM产品形态" SRC_NAME="dw21_ndm_mrs.bin,mrs_common_ndm_mrs_normal.hnv,ndm_flash_partition_table.bin" TYPE="hupg" />
+            
+            
+            
+            
+            
+            <Prod CFG_FILE="cco" DEV="CCO" ID="common_cco" IS_SECURE_BOOT="TRUE" NAME="CCO product form. CNComments: CCO产品形态" SRC_NAME="dw21_flash_boot_secure_flash.bin,mrs_common_cco_mrs_factory.hnv,mrs_common_cco_mrs_normal.hnv,dw21_cco_mrs.bin" TYPE="hbin" />
+            <Prod CFG_FILE="sta" DEV="STA" ID="common_sta" IS_SECURE_BOOT="TRUE" NAME="STA product form. CNComments: STA产品形态" SRC_NAME="dw21_flash_boot_secure_flash.bin,mrs_common_sta_mrs_factory.hnv,mrs_common_sta_mrs_normal.hnv,dw21_sta_mrs.bin" TYPE="hbin" />
+            <Prod CFG_FILE="sta" DEV="STA" ID="common_relay" IS_SECURE_BOOT="TRUE" NAME="Relay product form. CNComments: 中继产品形态" SRC_NAME="dw21_flash_boot_secure_flash.bin,mrs_common_relay_mrs_factory.hnv,mrs_common_relay_mrs_normal.hnv,dw21_sta_mrs.bin" TYPE="hbin" />
+            <Prod CFG_FILE="ndm" DEV="NDM" ID="common_ndm" IS_SECURE_BOOT="TRUE" NAME="NDM product form. CNComments: NDM产品形态" SRC_NAME="dw21_flash_boot_secure_flash.bin,mrs_common_ndm_mrs_factory.hnv,mrs_common_ndm_mrs_normal.hnv,dw21_ndm_mrs.bin" TYPE="hbin" />
+
+            
+            </APP>
+    </PROJECT>
+</PRODUCT>

@@ -1,0 +1,12 @@
+mdm/phy/plc_freq
+mdm/inc
+mdm/mac/inc
+mdm/mac/src
+mdm/phy/src
+mdm/phy/inc
+mdm/phy/phy_ram
+rom/mdm/phy/inc
+target/config/stub
+bsp/inc
+bsp/sal/inc
+bsp/boardcfg/phy

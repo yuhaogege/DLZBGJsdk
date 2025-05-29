@@ -1,0 +1,2451 @@
+# 1 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c"
+# 1 "/home/code/output/DW21_release/mk_image/image/sdk/nv/scripts//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c"
+# 11 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c"
+# 1 "../../build_tmp/config/soc_product_config.h" 1
+# 12 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c" 2
+# 1 "/home/code/output/DW21_release/mk_image/image/sdk/target/config/dbk/dbk_hdb_common.h" 1
+# 12 "/home/code/output/DW21_release/mk_image/image/sdk/target/config/dbk/dbk_hdb_common.h"
+# 1 "../../target/include/soc_config.h" 1
+# 10 "../../target/include/soc_config.h"
+# 1 "../../target/include/interface/rom/soc_config_rom.h" 1
+# 11 "../../target/include/soc_config.h" 2
+# 1 "../../target/include/interface/rom/soc_types_rom.h" 1
+# 50 "../../target/include/interface/rom/soc_types_rom.h"
+typedef unsigned int td_u32;
+typedef int td_s32;
+typedef unsigned short td_u16;
+typedef signed short td_s16;
+typedef unsigned char td_u8;
+typedef signed char td_s8;
+typedef void td_void;
+typedef char td_char;
+typedef unsigned char td_uchar;
+typedef td_u8 td_bool;
+typedef void *td_pvoid;
+typedef td_u8 td_byte;
+typedef td_pvoid td_handle;
+typedef td_byte *td_pbyte;
+typedef float td_float;
+typedef double td_double;
+typedef volatile td_u32 td_u32_reg;
+typedef td_pvoid td_func_ptr;
+typedef td_u32 td_func;
+typedef unsigned int td_size_t;
+typedef int td_ssize_t;
+typedef int td_offset_t;
+typedef unsigned int uintptr_t;
+typedef int intptr_t;
+# 91 "../../target/include/interface/rom/soc_types_rom.h"
+typedef const td_char *td_pcstr;
+typedef unsigned long long td_u64;
+typedef long long td_s64;
+# 301 "../../target/include/interface/rom/soc_types_rom.h"
+# 1 "../../target/include/interface/rom/soc_errno_rom.h" 1
+# 302 "../../target/include/interface/rom/soc_types_rom.h" 2
+# 12 "../../target/include/soc_config.h" 2
+# 13 "/home/code/output/DW21_release/mk_image/image/sdk/target/config/dbk/dbk_hdb_common.h" 2
+
+typedef struct {
+} null_stru;
+
+typedef struct {
+} dbk_null_stru;
+
+
+typedef struct {
+} dbk_nack_null_stru;
+
+typedef struct {
+    char str[1];
+} dbk_str_type;
+
+typedef struct {
+    long data[2];
+} dbk_s32_array_2_stru;
+
+typedef struct {
+    long data[3];
+} dbk_s32_array_3_stru;
+
+typedef struct {
+    long data[4];
+} dbk_s32_array_4_stru;
+
+typedef struct {
+    long data[5];
+} dbk_s32_array_5_stru;
+
+typedef struct {
+    long data[6];
+} dbk_s32_array_6_stru;
+
+typedef struct {
+    td_u32 data[2];
+} dbk_u32_array_2_stru;
+
+typedef struct {
+    unsigned long data[3];
+} dbk_u32_array_3_stru;
+
+typedef struct {
+    td_u32 data[4];
+} dbk_u32_array_4_stru;
+
+typedef struct {
+    char str[128];
+} dbk_file_type;
+
+typedef struct {
+    char str[1];
+} dbk_dump_data_stru;
+
+typedef struct {
+    char str[1];
+} dbk_dump_hex_stru;
+
+typedef struct {
+} dbk_file_type_stru;
+
+typedef struct {
+    td_u32 data;
+} dbk_u32_type_stru;
+
+typedef struct {
+    td_u32 opt;
+    td_u32 val;
+} dbk_u32_2_type_stru;
+
+typedef struct {
+    td_u8 data[19];
+} dbk_au8_19_stru;
+
+typedef struct {
+    td_u32 data[20];
+} dbk_array20_stru;
+
+typedef struct {
+    td_u32 data[23];
+} dbk_array23_stru;
+
+typedef struct {
+    td_u8 mac[6];
+    td_u8 data[90];
+} dbk_md90_b_stru;
+
+typedef struct {
+    td_u8 mac[8];
+} dbk_plc_sdm_mac_stru;
+
+typedef struct {
+    td_u32 id;
+    td_u32 size;
+    td_u8 data[128];
+} dbk_nv_req_stru;
+
+typedef struct {
+    td_u32 rc;
+    td_u32 nv_id;
+    td_u32 data_size;
+    td_u8 data[128];
+} dbk_nv_ack_stru;
+
+typedef struct {
+    td_u32 addr;
+    td_u32 total_size;
+    td_u32 size;
+    td_u32 sn;
+} dbk_dump_bin_req_stru;
+# 13 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c" 2
+# 1 "../../target/include/soc_mdm_types.h" 1
+# 10 "../../target/include/soc_mdm_types.h"
+
+
+# 1 "../../target/include/interface/rom/soc_mdm_types_rom.h" 1
+
+
+
+
+
+
+
+
+
+
+
+
+# 13 "../../target/include/soc_mdm_types.h" 2
+
+
+# 1 "../../target/include/interface/rom/soc_mdm_msg.h" 1
+# 38 "../../target/include/interface/rom/soc_mdm_msg.h"
+typedef struct {
+    td_u32 msg_id;
+    uintptr_t param[4];
+} ext_sys_queue_msg;
+# 71 "../../target/include/interface/rom/soc_mdm_msg.h"
+extern td_u32 uapi_msg_queue_create( td_u32 *id, td_char name[8], td_u16 queue_len, td_u32 msg_size);
+# 93 "../../target/include/interface/rom/soc_mdm_msg.h"
+extern td_u32 uapi_msg_queue_delete(td_u32 id);
+# 121 "../../target/include/interface/rom/soc_mdm_msg.h"
+extern td_u32 uapi_msg_queue_send(td_u32 id, td_pvoid msg, td_u32 timeout, td_u32 msg_size);
+# 150 "../../target/include/interface/rom/soc_mdm_msg.h"
+extern td_u32 uapi_msg_queue_wait(td_u32 id, td_pvoid msg, td_u32 timeout, td_u32 msg_size);
+# 169 "../../target/include/interface/rom/soc_mdm_msg.h"
+extern td_bool uapi_msg_queue_is_full(td_u32 id);
+# 188 "../../target/include/interface/rom/soc_mdm_msg.h"
+extern td_u32 uapi_msg_queue_get_msg_num(td_u32 id);
+# 208 "../../target/include/interface/rom/soc_mdm_msg.h"
+extern td_u32 uapi_msg_queue_get_msg_total(td_u32 id);
+# 16 "../../target/include/soc_mdm_types.h" 2
+# 66 "../../target/include/soc_mdm_types.h"
+typedef struct {
+    td_u32 lo;
+    td_u32 hi;
+} ext_obj64;
+
+
+
+
+
+typedef struct {
+    td_u32 major_minor_version;
+    td_u32 revision_version;
+    td_u32 build_version;
+} ext_ue_soft_version;
+
+
+
+
+
+
+
+typedef struct {
+    td_u16 v_ver_no;
+    td_u16 r_ver_no;
+    td_u16 c_ver_no;
+    td_u16 b_ver_no;
+    td_u16 spc_no;
+    td_u16 custom_ver;
+    td_u32 product_no;
+
+    td_char ac_build_date[10];
+    td_char ac_build_time[8];
+} ext_ue_build_ver_info;
+
+typedef struct {
+    td_u16 version_v;
+    td_u16 version_r;
+    td_u16 version_c;
+    td_u16 version_b;
+    td_u16 version_spc;
+    td_u16 reserved[3];
+} ext_ue_product_ver;
+
+
+
+
+
+
+typedef struct {
+    td_char *product_version;
+    td_char *build_date;
+    td_char *build_time;
+} ext_product_info;
+# 130 "../../target/include/soc_mdm_types.h"
+typedef enum {
+    EXT_DMS_LCHL_MODE_LOCAL = 0,
+    EXT_DMS_LCHL_MODE_PLC,
+    EXT_DMS_LCHL_MODE_MAX
+} ext_dms_lchl_mode;
+
+typedef struct {
+    td_u16 id;
+    td_u8 mode;
+    td_u8 ctrl;
+    td_u8 discard_old_data : 1;
+    td_u8 data_timeout : 1;
+    td_u8 rsv0 : 6;
+    td_u8 form_serial_number;
+    td_u8 dest_mac[6];
+    td_u8 src_mac[6];
+    td_u16 payload_len;
+    td_pbyte payload;
+} ext_dms_chl_rx;
+
+typedef struct {
+    td_u16 idx;
+    td_u16 arq_cnt;
+    td_u32 err;
+} ext_dms_chl_tx_ind;
+
+typedef struct {
+    ext_dms_chl_tx_ind chl_tx;
+} ext_dms_chl_status_ind;
+# 167 "../../target/include/soc_mdm_types.h"
+typedef td_u32 (*ext_dms_chl_connect_f)(td_u16, td_u8);
+typedef td_u32 (*ext_dms_chl_msg_ind_f)(td_u16, td_u32, td_pvoid);
+typedef td_u32 (*ext_dms_chl_rx_f)(td_u16, const ext_dms_chl_rx *);
+typedef td_u32 (*ext_dms_chl_iremote_packet_f)(td_u32, td_pvoid, td_u16);
+
+
+
+
+
+
+typedef struct {
+    ext_dms_chl_connect_f fn_chl_connect;
+    ext_dms_chl_rx_f fn_chl_data_rx;
+    ext_dms_chl_msg_ind_f fn_chl_msg_rx;
+} ext_dms_chl_port_obj;
+# 196 "../../target/include/soc_mdm_types.h"
+typedef struct {
+    td_u16 data_size;
+    td_u8 inside_info[((sizeof(td_u8) + sizeof(td_u8)) + (4))];
+    td_u8 data[0];
+} ext_dms_chl_tx_data;
+# 221 "../../target/include/soc_mdm_types.h"
+typedef struct {
+    td_u16 id;
+    td_u8 ctrl;
+    td_u8 type;
+
+    td_u8 prio;
+    td_u8 max_resend_count;
+# 238 "../../target/include/soc_mdm_types.h"
+    td_u8 send_mode;
+
+
+
+
+    td_bool is_stas_commu;
+    td_u8 dest_mac[6];
+
+
+
+
+    td_u8 is_set_send_type;
+    td_u8 send_type;
+} ext_dms_chl_tx_ctrl;
+typedef ext_dms_chl_tx_ctrl ext_dms_chl_tx_addr_s;
+# 284 "../../target/include/soc_mdm_types.h"
+typedef struct {
+    td_u16 id;
+    td_u16 src_mod_id;
+    td_u16 dest_mod_id;
+    td_u16 data_size;
+    td_pvoid data;
+} ext_diag_layer_msg;
+# 313 "../../target/include/soc_mdm_types.h"
+typedef enum {
+    EXT_DFX_MAC_MSG_ROUTER = 0x200,
+    EXT_DFX_MAC_MSG_DIAG
+
+
+} ext_sal_dfx_mac_msg;
+# 334 "../../target/include/soc_mdm_types.h"
+typedef struct {
+    td_u32 upg_id;
+    td_u32 option;
+
+} ext_upg_req_option;
+
+typedef struct {
+    td_u16 id;
+    td_u16 payload_size;
+    td_u8 payload[0];
+} ext_diag_packet;
+# 353 "../../target/include/soc_mdm_types.h"
+typedef struct {
+
+
+
+
+
+
+
+    td_u8 sys_mode;
+    td_u8 boot_ver_idx;
+    td_u8 sys_cause;
+
+    td_u8 version_v;
+    td_u8 version_r;
+    td_u8 version_c;
+    td_u8 build_datetime[6];
+    td_u16 version_b;
+    td_u16 version_spc;
+    td_u16 chip_version;
+
+
+
+    td_u8 boot_cause;
+
+    td_u8 boot_ver;
+    td_u16 sw_ver;
+    td_u16 year : 7;
+    td_u16 month : 4;
+    td_u16 day : 5;
+    td_char manu_code[2];
+    td_char chip_code[2];
+} ext_sys_status_info;
+
+typedef struct {
+    td_u8 mac[6];
+    td_u8 product_type;
+
+
+
+    td_u8 pad1;
+
+    td_u16 tei : 12;
+    td_u16 level : 4;
+    td_u16 proxy_tei : 12;
+    td_u16 role : 4;
+
+    ext_sys_status_info sta_ver;
+} ext_mac_network_topo_entry;
+
+typedef struct {
+    td_u8 repeter_level;
+    td_pvoid topo;
+} ext_mac_config_info;
+
+
+
+
+
+typedef enum {
+    EXT_SYS_ENUM_RST_NO_REQ = 0,
+    EXT_SYS_ENUM_RST_DO_PLEASE,
+    EXT_SYS_ENUM_RST_NOT_PLEASE,
+    EXT_SYS_ENUM_RST_MAX
+} ext_sys_rst_component_vote;
+
+
+typedef struct {
+    td_u8 src_mac[6];
+    td_u8 dest_mac[6];
+
+    td_bool is_exist_mac;
+    td_u8 max_resend_count;
+
+    td_u8 lid;
+    td_u8 send_mode;
+
+    td_u32 is_set_send_type : 1;
+    td_u32 send_type : 3;
+    td_u32 is_ee_iv : 1;
+    td_u32 pad : 1;
+    td_u32 form_serial_number : 8;
+
+
+
+
+
+    td_u32 use_network_mode : 2;
+    td_u32 pad2 : 16;
+} dms_mac_frame_ctrl;
+# 467 "../../target/include/soc_mdm_types.h"
+typedef struct {
+    td_u32 sn;
+    td_u16 trans_id;
+    td_u16 control : 15;
+    td_u16 du_link : 1;
+
+    td_u16 user_data;
+    td_u8 prod_type;
+
+
+
+
+    td_u8 transformed : 1;
+    td_u8 pad : 7;
+
+    td_u8 mac_addr[3][6];
+    td_u8 ndm_mac_addr[6];
+} ext_nd_remote_frame_head;
+
+
+
+
+typedef struct {
+    td_u32 sn;
+    td_u16 trans_id;
+    td_u16 control : 15;
+    td_u16 du_link : 1;
+
+    td_u16 user_data;
+    td_u8 prod_type;
+    td_u8 pad;
+
+    td_u16 fragment_id;
+    td_u16 fragment_count : 9;
+
+    td_u16 rsb_pkt_flag : 1;
+
+    td_u16 transformed : 1;
+    td_u16 pad2 : 5;
+
+    td_u16 fragment_trans_id;
+    td_u16 pad3;
+
+    td_u8 mac_addr[3][6];
+    td_u8 ndm_mac_addr[6];
+} ext_nd_remote_frame_ind_head;
+# 573 "../../target/include/soc_mdm_types.h"
+typedef enum {
+    EXT_CFG_PERFORMANCE_HIGH,
+    EXT_CFG_PERFORMANCE_LOW,
+    EXT_CFG_PERFORMANCE_MAX,
+} ext_cfg_performance;
+# 611 "../../target/include/soc_mdm_types.h"
+
+# 14 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c" 2
+
+
+# 1 "../../target/config/nv/soc_ft_nv.h" 1
+# 10 "../../target/config/nv/soc_ft_nv.h"
+# 1 "../../bsp/inc/soc_partition_table.h" 1
+# 10 "../../bsp/inc/soc_partition_table.h"
+# 1 "../../target/include/soc_types.h" 1
+# 11 "../../bsp/inc/soc_partition_table.h" 2
+
+# 1 "../../target/include/interface/soc_mdm_partition_table.h" 1
+# 63 "../../target/include/interface/soc_mdm_partition_table.h"
+typedef enum {
+    EXT_FLASH_PARTITON_BOOT = 0,
+    EXT_FLASH_PARTITON_FACTORY_NV,
+    EXT_FLASH_PARTITON_NV_BACKUP,
+    EXT_FLASH_PARTITON_KERNEL,
+
+    EXT_FLASH_PARTITON_UPG_BACKUP,
+    EXT_FLASH_PARTITON_NV_FILE,
+    EXT_FLASH_PARTITON_CRASH_INFO,
+    EXT_FLASH_PARTITON_USER_INFO_1,
+
+    EXT_FLASH_PARTITON_USER_INFO_2,
+    EXT_FLASH_PARTITON_USER_INFO_3,
+    EXT_FLASH_PARTITON_USER_INFO_4,
+    EXT_FLASH_PARTITON_USER_INFO_5,
+} ext_flash_partition_table_id;
+
+
+
+
+
+typedef struct {
+    td_u32 boot_support : 1;
+    td_u32 reserve : 10;
+    td_u32 ver_num : 5;
+
+
+
+    td_u32 bitmap : 16;
+
+
+} ext_partition_ver_info;
+
+
+
+
+
+typedef struct {
+    td_u32 finished_block : 12;
+    td_u32 reserve : 12;
+    td_u32 id : 5;
+    td_u32 move : 1;
+    td_u32 top1_or_bottom0 : 2;
+
+
+} ext_pt_change_status;
+
+
+
+
+
+typedef struct {
+    ext_partition_ver_info ver_support;
+
+
+    td_u32 temp_area_blk : 12;
+    td_u32 total_num : 5;
+    td_u32 reserve : 14;
+    td_u32 status : 1;
+} ext_pt_change_ctrl;
+
+
+
+
+
+typedef struct {
+    td_u8 id : 5;
+    td_u8 reserve : 1;
+    td_u8 top1_or_bottom0 : 2;
+} ext_pt_change_detail;
+
+
+
+
+
+typedef struct {
+    ext_pt_change_ctrl ctrl;
+    ext_pt_change_status table[12];
+} ext_pt_change_log;
+
+
+
+
+
+typedef struct {
+    td_u32 addr_blk : 12;
+
+    td_u32 size_blk : 12;
+    td_u32 pad : 7;
+    td_u32 dir : 1;
+} ext_flash_partition_info;
+
+
+
+
+
+typedef struct {
+    ext_partition_ver_info ver;
+    ext_flash_partition_info table[12];
+    td_u32 reserve[2];
+} ext_flash_partition_table;
+
+
+
+
+
+typedef struct {
+    ext_flash_partition_table new_info;
+
+    ext_pt_change_ctrl change_ctrl_info;
+
+
+
+    ext_pt_change_detail change_item[0];
+
+
+} ext_flash_partition_chage_info;
+
+
+
+
+
+typedef enum {
+    EXT_PARTITION_VER_THE_SAME = 0,
+    EXT_PARTITION_VER_NEW,
+    EXT_PARTITION_VER_ERR,
+} ext_partition_ver;
+# 208 "../../target/include/interface/soc_mdm_partition_table.h"
+td_u32 uapi_flash_partition_init(td_void);
+# 226 "../../target/include/interface/soc_mdm_partition_table.h"
+ext_flash_partition_table *uapi_get_partition_table(td_void);
+# 245 "../../target/include/interface/soc_mdm_partition_table.h"
+td_u32 uapi_flash_partition_get_ver(ext_partition_ver_info *ver);
+# 263 "../../target/include/interface/soc_mdm_partition_table.h"
+ext_partition_ver uapi_flash_partition_check_ver(const ext_partition_ver_info *ver);
+# 295 "../../target/include/interface/soc_mdm_partition_table.h"
+td_u32 uapi_flash_partition_config(ext_flash_partition_chage_info *change_info, td_u16 size);
+# 13 "../../bsp/inc/soc_partition_table.h" 2
+
+
+
+
+
+
+typedef enum {
+    EXT_PARTITON_SOFT_RESET = 0,
+    EXT_PARTITON_HARD_RESET,
+    EXT_PARTITON_NO_RESET,
+} ext_partition_reset;
+# 42 "../../bsp/inc/soc_partition_table.h"
+td_u32 uapi_flash_partition_refresh(ext_partition_reset reset);
+# 11 "../../target/config/nv/soc_ft_nv.h" 2
+# 46 "../../target/config/nv/soc_ft_nv.h"
+inline td_bool uapi_is_nv_ftm(td_u16 x)
+{
+    return (x < 0x19);
+}
+
+typedef struct {
+    td_char id[3];
+    td_char chip_id[5];
+} ext_nv_ftm_manufacotr_id;
+# 65 "../../target/config/nv/soc_ft_nv.h"
+typedef enum {
+    EXT_FTM_PRODUCT_TYPE_UNKOWN = 0,
+
+
+    EXT_FTM_PRODUCT_TYPE_C01 = 1,
+    EXT_FTM_PRODUCT_TYPE_C02,
+    EXT_FTM_PRODUCT_TYPE_C03,
+    EXT_FTM_PRODUCT_TYPE_C04,
+    EXT_FTM_PRODUCT_TYPE_C05,
+    EXT_FTM_PRODUCT_TYPE_C06,
+    EXT_FTM_PRODUCT_TYPE_C07,
+    EXT_FTM_PRODUCT_TYPE_C08,
+
+    EXT_FTM_PRODUCT_TYPE_C60 = 60,
+
+
+    EXT_FTM_PRODUCT_TYPE_D61 = 61,
+    EXT_FTM_PRODUCT_TYPE_D62,
+    EXT_FTM_PRODUCT_TYPE_D63,
+    EXT_FTM_PRODUCT_TYPE_D64,
+
+    EXT_FTM_PRODUCT_TYPE_D100 = 100,
+
+
+    EXT_FTM_PRODUCT_TYPE_M101 = 101,
+    EXT_FTM_PRODUCT_TYPE_M102,
+    EXT_FTM_PRODUCT_TYPE_M103,
+    EXT_FTM_PRODUCT_TYPE_M104,
+    EXT_FTM_PRODUCT_TYPE_M105,
+    EXT_FTM_PRODUCT_TYPE_M106,
+    EXT_FTM_PRODUCT_TYPE_M107,
+    EXT_FTM_PRODUCT_TYPE_M108,
+
+    EXT_FTM_PRODUCT_TYPE_M8191 = 8191,
+} ext_ftm_product_type;
+
+typedef struct {
+    ext_ftm_product_type product_type;
+    td_u8 plc_mac[6];
+    td_u8 reserved[6];
+} ext_nv_ftm_product_id;
+# 118 "../../target/config/nv/soc_ft_nv.h"
+typedef struct {
+    td_u8 data[64];
+    td_u32 rsv[16];
+} ext_nv_ftm_soc_cfg;
+
+typedef struct {
+    td_u32 status;
+    td_u32 load_flash_addr;
+    td_u32 last_blk_idx;
+    td_u32 rcv_file_size;
+    td_u32 upg_id;
+    td_u32 upg_window_time;
+    td_u32 back_times;
+    td_u32 runtimes;
+
+    td_u8 upg_target;
+    td_u8 test_mode;
+    td_u8 decompress_nv;
+    td_u8 reserved1[1];
+
+    td_u32 reserved2;
+} ext_nv_ftm_startup_cfg;
+
+
+typedef struct {
+    td_u32 option;
+    td_u32 upg_id;
+    td_u32 file_len;
+    td_u32 blk_num;
+    td_u32 upg_time_window;
+    td_u32 last_block_id;
+    td_u32 crc;
+} ext_nv_ftm_upg_start_cfg;
+
+
+
+typedef struct {
+    td_u16 total_number_when_start;
+    td_u16 extra_timer_max_count;
+    td_u16 extra_timer_period;
+
+    td_u16 upg_verify_new_policy;
+
+    td_u16 total_number_threshold;
+    td_u16 rcv_timeout_timer_period;
+    td_u16 blk_send_period;
+    td_u8 reserved2;
+    td_u8 upg_type;
+    td_u8 device_upg_status;
+
+    td_u8 transmit_blk_num;
+    td_u16 mac_tx_arq_period;
+    td_u16 start_tx_period_num;
+    td_u16 transmit_blk_resend_num;
+
+    td_u16 broadcast_stop_num;
+    td_u16 broadcast_stop_period;
+
+    td_u16 sta_dfx_report;
+    td_u16 cco_dfx_report;
+    td_u16 broadcast_finish_num;
+    td_u16 broadcast_finish_period;
+    td_u16 reserved;
+
+    td_u16 whether_upg_test_mode;
+} ext_nv_ftm_upg_cfg;
+
+typedef struct _diag_cmd_config_nm_serial_number_ {
+    td_u32 form_serial_number;
+    td_u32 assoc_random_number;
+} diag_cmd_config_nm_serial_number_stru;
+
+
+
+typedef struct {
+    td_u8 main_network_snid;
+    td_u8 init_freq;
+    td_u8 sub_network_snid;
+    td_u8 network_mode;
+
+    td_u8 network_mode_policy;
+    td_u8 preamble_seq_shift_index;
+    td_u8 rf_channel;
+    td_u8 rf_rate;
+
+    td_u8 is_dual_module;
+    td_u8 tx_power;
+    td_u8 modem_type;
+    td_u8 white_list_mode;
+
+    td_u8 sta_type;
+    td_u8 recover_sg_freq;
+    td_s16 correction_voltage;
+
+    td_u32 main_network_nid;
+    td_u32 lock_snid;
+
+    td_u8 belong_cco_mac[6];
+    td_u8 history_porxy_flag;
+    td_u8 history_level;
+
+    td_u32 mesh_lock_nid;
+    td_u8 main_1_mac[6];
+    td_u8 main_2_mac[6];
+    td_u32 reserved1[4];
+} ext_nv_ftm_nm_init_para;
+
+typedef struct {
+
+    td_u32 flash_addr;
+    td_u32 flash_size;
+    td_u32 crc;
+    td_u8 upg_mode;
+    td_u8 do_upgrade : 1;
+    td_u8 pad1 : 7;
+    td_u8 pad2[6];
+} ext_upg_mode_nv;
+
+typedef struct {
+    td_u32 magic;
+    td_u8 cur_times;
+    td_u8 dst_times;
+    td_u8 data[26];
+} ext_nv_ftm_upg_extension;
+
+typedef struct {
+    td_u32 reserved[32];
+} ext_nv_ftm_reserved_id;
+
+typedef struct {
+    td_u32 reserved[16];
+} ext_nv_ftm_reserved1_id;
+
+typedef struct {
+    td_u32 reserved[16];
+} ext_nv_ftm_reserved2_id;
+
+typedef struct {
+    td_u32 reserved[16];
+} ext_nv_ftm_reserved3_id;
+
+typedef struct {
+    td_u32 reserved[16];
+} ext_nv_ftm_reserved4_id;
+
+typedef struct {
+    td_u32 reserved[16];
+} ext_nv_ftm_reserved5_id;
+
+typedef struct {
+    td_u32 reserved[16];
+} ext_nv_ftm_reserved8;
+
+typedef struct {
+    td_u32 reserved[16];
+} ext_nv_ftm_reserved9;
+# 17 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c" 2
+# 1 "../../target/config/nv/soc_sal_nv.h" 1
+# 17 "../../target/config/nv/soc_sal_nv.h"
+typedef struct {
+    td_u8 enable_rst;
+    td_u8 rsv[3];
+    td_u32 max_proxy_time;
+    td_u32 plc_no_tx_time;
+    td_u32 plc_no_rx_time;
+    td_u32 max_abnormal_time;
+    td_u32 secure_begin_time;
+    td_u32 secure_end_time;
+    td_u32 max_time_usr0;
+    td_u32 max_time_usr1;
+} ext_nv_reset_cfg_id;
+
+
+typedef struct {
+    td_u32 rst_times;
+} ext_sys_reset_times;
+
+typedef struct {
+    td_u32 lightsleep : 1;
+    td_u32 deepsleep : 1;
+    td_u32 reserve : 30;
+} ext_nv_sys_startup;
+
+typedef struct {
+    td_u32 addr;
+    td_u32 size;
+    td_u32 crc;
+} ext_trans_host_nv;
+# 18 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c" 2
+# 1 "../../target/config/nv/soc_mac_nv.h" 1
+# 12 "../../target/config/nv/soc_mac_nv.h"
+# 1 "../../target/config/nv/soc_mac_nv_value_def.h" 1
+# 10 "../../target/config/nv/soc_mac_nv_value_def.h"
+# 1 "../../target/config/nv/soc_phy_nv.h" 1
+# 37 "../../target/config/nv/soc_phy_nv.h"
+typedef struct {
+    td_u8 param1;
+    td_u8 param2;
+    td_u8 param3;
+    td_u8 param4;
+} freq_self_detect_mask_stru;
+
+typedef struct {
+    td_u32 param1 : 8;
+    td_u32 param2 : 1;
+    td_u32 param3 : 8;
+    td_u32 param4 : 6;
+    td_u32 param5 : 3;
+    td_u32 param6 : 6;
+
+    td_u32 param7 : 2;
+    td_u32 param8 : 7;
+    td_u32 param9 : 7;
+    td_u32 param10 : 7;
+    td_u32 param11 : 7;
+    td_u32 param12 : 1;
+    td_u32 param13 : 1;
+
+    freq_self_detect_mask_stru param14[4];
+
+    td_u32 param15 : 1;
+    td_u32 param16 : 7;
+    td_s32 param17 : 7;
+    td_u32 param18 : 14;
+    td_u32 param19 : 3;
+
+    td_u32 param20 : 5;
+    td_u32 param21 : 6;
+    td_u32 param22 : 1;
+    td_u32 param23 : 20;
+
+    td_u32 param24 : 14;
+    td_u32 param25 : 14;
+    td_u32 param26 : 4;
+
+    td_u32 param27 : 14;
+    td_u32 param28 : 5;
+    td_u32 param29 : 1;
+    td_u32 param30 : 5;
+    td_u32 param31 : 7;
+
+    td_u32 param33 : 8;
+    td_u32 param34 : 8;
+    td_u32 param35 : 8;
+    td_u32 param36 : 8;
+
+    td_u32 param37;
+
+    td_u8 param38 : 1;
+    td_u8 param39 : 1;
+    td_u8 param40 : 1;
+    td_u8 param41 : 4;
+    td_u8 param42 : 1;
+    td_u8 param43[3];
+
+    td_u8 param44[3];
+    td_u8 param45;
+
+    td_u16 param46[3];
+    td_u16 param47 : 8;
+    td_u16 param48 : 8;
+
+    td_u8 param49;
+    td_u8 param50;
+    td_s8 param51;
+    td_s8 param52;
+
+    td_u16 param53 : 12;
+    td_u16 param54 : 3;
+    td_u16 param55 : 1;
+    td_u8 param56;
+    td_u8 param57;
+
+    td_u8 param58;
+    td_u8 param59;
+    td_u16 param60;
+
+    td_u32 param61 : 1;
+    td_u32 param62 : 1;
+    td_u32 param63 : 1;
+    td_u32 param64 : 8;
+    td_u32 param65 : 21;
+} diag_cmd_phy_main_param_nv_stru;
+
+typedef struct {
+    td_u32 param[8];
+} diag_cmd_tonemask_nv_mask_stru;
+
+typedef struct {
+    td_u16 param1;
+    td_u8 param2;
+    td_u8 param3;
+
+    td_u32 param4;
+    td_u16 param5;
+    td_u16 param6;
+} diag_cmd_ntb_calc_nv_mask_stru;
+
+typedef struct {
+    td_u8 param1[8];
+} diag_cmd_digital_pwr_nv_mask_stru;
+
+typedef struct {
+    td_u8 param1;
+    td_u8 param2[3];
+} diag_cmd_afe_pwr_nv_mask_stru;
+
+typedef struct {
+    td_u8 power_adjust[8];
+
+
+} diag_cmd_digital_pwr_nv_stru;
+
+typedef struct {
+    td_u8 mpw_afe_gain;
+    td_u8 pad[3];
+} diag_cmd_afe_pwr_nv_stru;
+
+typedef struct {
+    td_u8 param1;
+    td_u8 param2;
+    td_u8 param3;
+    td_u8 param4;
+
+    td_u8 param5;
+    td_u8 param6;
+    td_u8 param7;
+    td_u8 param8;
+
+    td_u8 param9;
+    td_u8 param10;
+    td_u8 param11;
+    td_u8 param12;
+
+    td_u8 param13;
+    td_u8 param14;
+    td_u16 param15;
+
+    td_u8 param16;
+    td_u8 param17;
+    td_u8 param18;
+    td_u8 param19;
+    td_u32 param20;
+    td_u32 param21;
+
+    td_u32 param22;
+    td_u32 param23;
+    td_u16 param24;
+    td_u8 param25;
+    td_u8 param26;
+} diag_cmd_phy_stub_nv_mask_stru;
+
+typedef struct {
+    td_u32 param_w0 : 1;
+    td_u32 param_w1 : 1;
+    td_u32 param_w2 : 1;
+    td_u32 param_w3 : 1;
+    td_u32 param_w4 : 1;
+    td_u32 param_w5 : 1;
+    td_u32 param_w6 : 1;
+    td_u32 param_w7 : 1;
+    td_u32 param_w8 : 1;
+    td_u32 param_w9 : 1;
+    td_u32 param_w10 : 1;
+    td_u32 reserve : 21;
+} param_w_stru;
+
+typedef struct {
+    td_u16 spc_cycle_num;
+    td_bool is_rcv_win_enable;
+    td_u8 spc_rxlpf_mul2_en;
+
+    td_u8 spc_rx_dec51200_mul2_en;
+    td_u8 spc_rx_dec10240_mul2_en;
+    td_u8 spc_rx_dec2048_mul2_en;
+    td_u8 spc_rx_dec512_mul2_en;
+
+    td_u8 spc_rx_dec128_mul2_en;
+    td_u8 spc_rx_dec32_mul2_en;
+    td_u8 spc_rx_dec8_mul2_en;
+    td_u8 tx_space_en;
+
+    td_u8 tx_mark_en;
+    td_bool is_spc_enable;
+    td_u8 tx_right_shift;
+    td_u8 tx6p25shift_num;
+
+    td_u8 tx_up_convert_freq;
+    td_u8 peakdisttoler;
+    td_u8 syn_cc_window_en;
+    td_u8 sync_win_advance;
+
+    td_u8 smallhalfwinmin;
+    td_u8 smallhalfwinmax;
+    td_u8 largehalfwin;
+    td_u8 absscale;
+
+    td_u8 sumscale;
+    td_u8 valley_scale;
+    td_u8 plc_chl_timeout;
+    td_u8 gold_code_rep_num;
+
+    td_u8 gold_thres_large;
+    td_u8 gold_thres_small;
+    td_u8 cont_lost_sync_thres;
+    td_u8 total_lost_sync_thres;
+
+    td_u16 clear_identify_result_time_max;
+    td_u16 gold_cycle_num;
+
+
+
+
+    td_bool is_single_rcv_to_over_enable;
+    td_bool is_sync_atten_enable;
+
+
+    td_u8 neighbor_net_atten_thres;
+    td_u8 is_lock_snid_disable;
+
+    param_w_stru param_w;
+} diag_cmd_spc_nv_stru;
+# 11 "../../target/config/nv/soc_mac_nv_value_def.h" 2
+
+typedef td_u16 id_diag_config;
+# 59 "../../target/config/nv/soc_mac_nv_value_def.h"
+typedef enum {
+    MAC_IFS_FREQ_TRY_ORDER_OTHER_INDEX = 0,
+    MAC_IFS_FREQ_TRY_ORDER2_INDEX,
+    MAC_IFS_FREQ_TRY_ORDER3_INDEX,
+    MAC_IFS_FREQ_TRY_MAX_INDEX = 3,
+} diag_mac_ifs_cfg_index;
+# 82 "../../target/config/nv/soc_mac_nv_value_def.h"
+typedef struct {
+    td_u8 static_proxy_mac[6];
+    td_bool my_static_proxy_exist;
+    td_bool to_be_static_repeater;
+
+
+} diag_cmd_config_route_proxy_stru;
+
+
+
+
+typedef struct {
+    td_u32 timeout : 24;
+    td_u32 priorty : 8;
+} diag_cmd_config_timeout_on_pri_entry_stru;
+
+
+
+typedef struct _diag_cmd_config_timeout_on_pri_stru_ {
+    td_u8 num;
+    td_u8 pad[3];
+
+    diag_cmd_config_timeout_on_pri_entry_stru entry[10];
+} diag_cmd_config_timeout_on_pri_stru;
+
+
+
+
+
+
+typedef struct {
+    td_u8 priorty;
+    td_u8 cco_queue_size;
+    td_u8 sta_queue_size;
+    td_u8 pad;
+} diag_cmd_config_buffer_percent_on_pri_entry_stru;
+
+
+
+typedef struct _diag_cmd_config_buffer_percent_on_pri_stru_ {
+    td_u8 num;
+    td_u8 pad[3];
+    diag_cmd_config_buffer_percent_on_pri_entry_stru entry[10];
+} diag_cmd_config_buffer_percent_on_pri_stru;
+
+
+
+
+
+
+typedef struct _diag_cmd_config_route_attrib_stru_ {
+
+
+
+
+    td_u16 rt_evaluate_cycle_time_len;
+    td_bool is_evaluate_proxy_before_join_chl;
+
+
+    td_u8 rt_down_comm_rate_basic_limit;
+
+    td_u8 rt_up_comm_rate_basic_limit;
+    td_u8 rt_choose_proxy_upper_limit;
+    td_u8 rt_choose_proxy_lower_limit;
+    td_u8 rt_continue_better_th;
+
+    td_u8 rt_high_diff;
+    td_u8 rt_middle_diff;
+    td_u8 rt_low_diff;
+    td_u8 is_path_table_dfx_enable;
+
+    td_u32 rt_proxy_far_near_alg_switch : 1;
+    td_u32 rt_stat_beacon_switch : 1;
+
+
+    td_u32 rt_far_or_near_alg_swith : 1;
+    td_u32 rt_lower_level_switch : 1;
+
+
+    td_u32 rt_channel_info_switch : 1;
+
+
+
+
+    td_u32 rt_up_comm_rate_redundancy_switch : 1;
+
+
+
+
+    td_u32 rt_less_than_lower_limit_switch : 1;
+
+
+
+
+
+    td_u32 rt_more_than_upper_limit_switch : 1;
+    td_u32 rt_mult_path_switch : 1;
+    td_u32 rt_get_multi_path_switch : 1;
+    td_u32 rt_snr_diff : 8;
+    td_u32 pad_1 : 14;
+
+    td_bool rt_convergence_flag;
+
+
+
+
+    td_u8 min_first_evaluate_period;
+    td_u8 rt_proxy_send_discovery_pk_len;
+    td_u8 rt_sta_send_discovery_pk_len;
+
+    td_u8 slide_window_weight[4];
+
+    td_bool is_star_disc_enable;
+    td_u8 enforcing_proxy_change_enable;
+    td_u16 enforcing_proxy_change_cycle;
+} diag_cmd_config_route_attrib_stru;
+
+
+
+typedef struct _diag_cmd_config_rt_cycle_seif_adaptive_attrib_str_ {
+    td_u16 station_cnt;
+    td_u16 evaluate_cycle_len;
+
+    td_u8 proxy_send_dk_cycle_len;
+
+
+    td_u8 sta_send_dk_cycle_len;
+
+
+    td_u8 pad[2];
+} diag_cmd_config_rt_cycle_seif_adaptive_attrib_str;
+
+typedef struct _diag_cmd_config_route_adaptive_attrib_stru_ {
+
+
+
+
+    td_u16 rt_policy;
+    td_u16 adaptive_redundance_para;
+
+
+    td_u8 multi_net_flag;
+    td_u8 pad[3];
+    diag_cmd_config_rt_cycle_seif_adaptive_attrib_str cycle_self_adaptive[6];
+} diag_cmd_config_route_adaptive_attrib_stru;
+
+
+typedef struct {
+    td_u16 fragment_sleep_time;
+    td_u8 fragment_resend_cnt;
+
+
+    td_u8 fc_pkt_num_max_per_req;
+
+
+
+    td_s16 proxy_snr_threshold;
+    td_u16 fc_rsp_wait_timer_period;
+
+    td_u32 fc_req_wait_timer_period;
+
+    td_u8 fc_send_times_per_req;
+    td_u8 fc_send_times_per_rsp;
+    td_u8 ndm_remote_send_switch;
+
+
+    td_u8 pad;
+} diag_cmd_config_ndm_pipe_nv_stru;
+
+
+
+
+typedef struct _diag_cmd_config_if_stru_ {
+    td_u16 pifs[MAC_IFS_FREQ_TRY_MAX_INDEX];
+    td_u16 rifs[MAC_IFS_FREQ_TRY_MAX_INDEX];
+    td_u16 cifs[MAC_IFS_FREQ_TRY_MAX_INDEX];
+    td_u16 bifs[MAC_IFS_FREQ_TRY_MAX_INDEX];
+
+    td_u16 eifs[8];
+
+    td_u16 ack_delay_durtion;
+
+
+    td_u16 time_redundancy;
+
+    td_u8 slot_dfx_switch;
+    td_u8 pad1;
+    td_u16 mesh_delay;
+} diag_cmd_config_if_stru;
+
+typedef struct {
+    td_u16 nbi_start;
+    td_u16 nbi_end;
+} diag_cmd_config_avoid_freq_entry;
+
+typedef struct {
+    td_bool emc_switch;
+    td_u8 report_static_cyc;
+    td_u8 avoid_freq_num;
+    td_u8 avoid_freq_mask_extend;
+
+
+
+
+    td_u16 freq_avoid_extend_time;
+    td_u16 power_control_pk_cycle;
+
+    td_u16 emc_periodic_detect_cycle;
+    td_u8 send_fail_th_power_recovery;
+    td_u8 power_adjust_step;
+
+    td_u8 max_channel_dec_thresh;
+    td_u8 min_channel_dec_thresh;
+    td_u8 white_noise_detect_th;
+    td_u8 is_enable_lab_nbi_judge;
+
+    td_u8 fft_num_th;
+    td_u8 power_control_nv_switch;
+    td_u8 send_fail_recovery_power_switch;
+    td_u8 noise_pow_target;
+
+    td_u8 powerloading_merge_th;
+    td_u8 lab_nbi_judge_th;
+
+
+    td_u8 lab_nbi_max;
+    td_u8 default_afe_power;
+
+    td_u32 test_pk_cycle;
+
+    td_u16 test_pk_size;
+    td_u8 test_pk_num;
+    td_u8 avoid_detect_th;
+
+    td_u16 sat_num_th;
+    td_u16 pad1;
+
+    diag_cmd_config_avoid_freq_entry freq[5];
+} diag_cmd_config_emc_para_stru;
+# 13 "../../target/config/nv/soc_mac_nv.h" 2
+
+
+typedef struct {
+    td_u16 evaluate_phase_bpc_or_cnt_th;
+    td_u16 boot_evaluate_fail_th;
+
+
+
+    td_u16 evaluate_cmm_diff;
+    td_u16 evaluate_channel_diff;
+} diag_cmd_config_phase_evaluate_attr_stru;
+
+typedef struct {
+    td_u8 cco_phase_cnt;
+    td_u8 default_phase;
+    td_u8 rx_phase_mode;
+
+
+    td_u8 dynamic_adjust_resend_enable;
+
+
+    td_u8 max_resend_cnt;
+    td_u8 fixed_resend_cnt;
+    td_u8 pad[2];
+
+    diag_cmd_config_phase_evaluate_attr_stru phs_evaluate_para;
+} diag_cmd_config_phase_attr_stru;
+
+
+
+
+typedef struct _diag_cmd_config_tdma_config_stru_ {
+    td_u32 max_beacon_period;
+    td_u32 min_beacon_period;
+
+    td_u16 percent_beacon_period;
+    td_u16 alloc_period_athead_time;
+
+    td_u8 one_bea_duration;
+    td_u8 central_beacon_num;
+    td_u8 no_report_backup_proxy_chance;
+
+
+    td_u8 start_alloc_first_level_cnf_bcn_cnt;
+
+
+
+    td_u8 comm_rate;
+    td_u8 min_discover_beacon_sum;
+    td_u8 net_forming_discover_beacon_state_count;
+    td_u8 net_forming_no_report_sta_chance_count;
+
+
+
+    td_u16 min_phase_duration;
+    td_bool pad2;
+    td_u8 alloc_dis_bea_cnt_for_rt_one_sta;
+
+    td_u16 min_network_packet_cp;
+    td_u16 max_bind_cp;
+
+    td_u16 pad4;
+    td_u8 pad5;
+    td_bool equip_mode_flag;
+
+    td_u16 max_proxy_count;
+
+
+    td_u16 max_proxy_count_max;
+
+
+
+    td_u16 pad6;
+    td_bool tdma_alloc_dfx_switch;
+    td_u8 tdma_join_count_per_periods;
+
+
+
+    td_u8 tdma_pk_duration;
+    td_u8 performance_test_switch;
+
+
+    td_u16 min_csma_duration;
+} diag_cmd_config_tdma_config_stru;
+
+typedef struct _diag_cmd_config_coordinate_config_stru_ {
+    td_u16 max_backup_sys_time;
+    td_u16 max_same_snid_err_time;
+
+    td_u16 send_pk_len_for_notify;
+
+
+    td_u16 send_pk_len_for_coordinate;
+
+
+
+    td_u16 check_cannot_comm_limit;
+    td_u16 listen_time_before_first_bea;
+
+
+
+    td_bool open_coordinate_network;
+    td_u8 network_evaluation_enable;
+    td_u8 continue_try_assoc_th;
+
+
+
+
+
+
+    td_u8 max_assoc_time;
+
+
+
+
+    td_bool cco_snid_coordinate_switch;
+    td_bool sta_snid_coordinate_switch;
+    td_bool conflict_detect_switch;
+    td_bool monitor_associate_flag;
+
+    td_u16 coordinate_backoff_time;
+    td_u16 bcn_send_period_for_star_net;
+
+    td_u16 listen_time_for_white;
+    td_u16 exception_by_cco_mac_th;
+    td_u16 report_interval;
+    td_u16 exception_interval;
+    td_u16 pad4;
+    td_u16 pad;
+} diag_cmd_config_coordinate_config_stru;
+
+
+
+
+typedef struct _diag_cmd_config_cmsa_backoff_pol_ {
+    td_u16 default_node_count;
+    td_u16 default_slot;
+
+
+    td_u8 fixed_bc;
+    td_u8 min_node_count;
+    td_u8 sm_scope_slot;
+    td_u8 sm_scope_bc;
+
+    td_u8 bg_scope_slot;
+    td_u8 bg_scope_bc;
+
+
+    td_u8 bc_ratio_500_k;
+    td_u8 bc_ratio_150_k;
+
+    td_u8 bc_table[20];
+    td_u8 dbc_table[8];
+    td_u8 bfs_table[8];
+} diag_cmd_config_cmsa_backoff_algorithm3_stru;
+
+typedef struct _diag_cmd_config_tx_csma_algorithm_ {
+    td_u16 base_slot_150k;
+    td_u16 base_slot_500k;
+    td_u16 wind_min;
+    td_u16 wind_max;
+
+    td_u16 backoff_time_150k_500k;
+    td_u16 collision_end;
+
+    td_bool is_150k_500k_backoff_enable;
+    td_bool is_preamble_interrupt_enable;
+    td_u8 sta_slot_multi;
+    td_u8 is_backoff_enable;
+
+    diag_cmd_config_cmsa_backoff_algorithm3_stru alg3;
+} diag_cmd_config_tx_csma_algorithm_stru;
+
+typedef struct _diag_cmd_config_assoc_config_ {
+    td_u8 mac_auth_enable;
+    td_u8 heart_check_mode;
+    td_u8 no_sta_join_max_time_for_spc;
+
+
+    td_u8 fast_assoc_cnt_max;
+
+
+
+
+
+    td_u16 pad2;
+    td_u16 max_child_sum;
+
+    td_u8 no_sta_join_max_time;
+
+
+
+    td_u8 assoc_gather_switch;
+    td_u16 min_change_proxy_req_resend_time;
+
+    td_u8 assoc_req_try_max;
+    td_u8 wait_gather_ind_time;
+    td_u8 change_proxy_req_try_max;
+    td_u8 ind_resend_max_count;
+
+    td_u8 slow_assoc_timeout;
+    td_u8 network_evaluation_time;
+    td_u8 wait_assoc_ind_timeout_max_150k;
+
+
+    td_u8 random_assoc_array_num;
+
+    td_u32 wait_for_mac_calculation_timeout;
+
+    td_u8 wait_assoc_ind_timeout;
+    td_u8 max_assoc_req;
+    td_bool random_assoc_enable;
+    td_u8 wait_assoc_ind_timeout_min;
+
+
+
+    td_u16 assoc_not_in_whiter;
+
+
+    td_u16 assoc_not_set_whiter;
+
+
+
+    td_u16 assoc_too_much_sta;
+    td_u16 assoc_too_much_pco;
+
+
+
+    td_u16 assoc_too_much_child;
+
+
+    td_u16 assoc_too_much_level;
+
+
+
+    td_u16 assoc_repeat_mac;
+
+
+    td_u16 random_assoc_time_not_150k;
+
+    td_u16 random_assoc_time_max_150k;
+    td_u8 wait_assoc_ind_timeout_min_150k;
+
+
+    td_u8 wait_gather_ind_time_150k;
+
+
+
+    td_u16 white_leave_sta_th;
+
+
+
+    td_u16 white_table_notify_num;
+
+
+    td_u16 cco_send_leave_pk_time;
+    td_u16 delay_leave_time_len;
+
+    td_u8 heartbeat_leave_cycle_th;
+    td_u8 heartbeat_report_cycle_th;
+
+
+    td_u8 route_cylce_per_heartbeat_cycle;
+    td_u8 heartbeat_pk_cnt_per_heartbeat_cycle;
+} diag_cmd_config_assoc_config_stru;
+
+typedef struct {
+    td_u16 select_assoc_timeout;
+    td_u16 fc_state_timeout;
+    td_u16 beacon_state_timeout;
+    td_u16 assoc_state_timeout;
+
+    td_u8 neighbor_atten_th;
+    td_u8 neighbor_atten_en;
+    td_u16 bcn_state_timeout_150k_with_security;
+
+    td_u32 assoc_belong_lock_duration;
+
+
+    td_u32 join_belong_lock_duration;
+
+
+    td_u32 neighbor_auth_time;
+    td_u16 pad2[2];
+} diag_cmd_config_multi_network_stru;
+
+typedef struct _diag_cmd_config_tx_sof_tmi_policy_ {
+    td_u32 default_72_sg : 4;
+    td_u32 default_136_sg : 4;
+    td_u32 default_520 : 4;
+    td_u32 default_72_p1901 : 4;
+    td_u32 default_136_p1901 : 4;
+    td_u32 resend_72_enable : 1;
+    td_u32 resend_136_enable : 1;
+    td_u32 resend_520_enable : 1;
+    td_u32 pad : 1;
+    td_u32 tmi_72_cnt : 4;
+    td_u32 tmi_136_cnt_sg : 4;
+
+    td_u32 tmi_520_cnt : 4;
+    td_u32 tmi_136_cnt_p1901 : 4;
+    td_u32 broadcast_72_sg : 4;
+    td_u32 broadcast_136_sg : 4;
+    td_u32 broadcast_520_sg : 4;
+    td_u32 broadcast_72_p1901 : 4;
+    td_u32 broadcast_136_p1901 : 4;
+    td_u32 broadcast_520_p1901 : 4;
+
+    td_u8 resend_72_sg[2];
+    td_u8 resend_136_sg[2];
+    td_u8 resend_520[2];
+    td_u8 resend_72_p1901[2];
+    td_u8 resend_136_p1901[2];
+    td_u8 tmi_auto_adjust_enable;
+    td_u8 degrade_resend_cnt;
+
+    td_u32 recover_tmi_period;
+
+    td_u8 broadcast_72_short : 4;
+    td_u8 broadcast_136_short : 4;
+    td_u8 broadcast_520_short : 4;
+    td_u8 pad1 : 4;
+    td_u8 add_bc_send_flag;
+    td_u8 bc_send_limit;
+} diag_cmd_config_tx_sof_tmi_policy_stru;
+
+typedef struct _diag_cmd_config_bcn_beacon_tmi_ {
+    td_u8 payload520_tmi_sg : 4;
+    td_u8 payload136_tmi : 4;
+    td_u8 payload72_tmi_sg : 4;
+    td_u8 payload520_tmi_p1901 : 4;
+    td_u8 payload72_tmi_p1901 : 4;
+    td_u8 pad1 : 4;
+    td_u8 pad;
+} diag_cmd_config_bcn_beacon_tmi_stru;
+
+typedef struct _diag_cmd_recode_rx_stat_config_stru_ {
+    td_u8 dfx_rx_report_switch;
+    td_u8 dfx_tx_report_switch;
+    td_u8 is_rcv_nm_pkt_rpt : 1;
+    td_u8 is_send_nm_pkt_rpt : 1;
+    td_u8 pad2 : 6;
+    td_u8 rcv_fc_switch;
+
+    td_u16 multi_switch;
+    td_u8 is_print_dis;
+    td_u8 pad3;
+} diag_cmd_recode_rx_stat_config_stru;
+
+typedef struct {
+    diag_cmd_recode_rx_stat_config_stru recode_rx_stat_policy;
+} diag_cmd_config_dfx_config_stru;
+
+typedef struct _diag_cmd_config_beacon_nv_ {
+    td_u8 alloc_slot_oneself_flag;
+
+
+    td_u8 cco_update_beacon_slot_flag;
+    td_u8 ptcl_detect_bcn_send_cnt;
+    td_u8 ptcl_detect_bcn_send_mode;
+
+    td_u32 alloc_slot_time_th;
+
+
+    td_u32 alloc_slot_len;
+    td_u32 protect_cp_len;
+    td_u32 csma_slot_slice_th;
+    td_u32 alloc_slot_len_for_star;
+} diag_cmd_config_beacon_nv_stru;
+
+typedef struct _diag_cmd_config_filter_switch_nv_stru_ {
+    td_u32 filter_switch;
+
+    td_bool is_freq_filter_enable;
+    td_u8 filter_timeout;
+    td_u8 pad[2];
+} diag_cmd_config_filter_switch_nv_stru;
+
+typedef struct _diag_cmd_config_blind_check_nv_stru_ {
+    td_bool blind_switch;
+    td_u8 pad[3];
+
+    td_u8 freq[8];
+    td_u8 blind_freq_check_time[8];
+
+
+
+    td_u32 whole_network_change_freq_time;
+
+
+} diag_cmd_config_blind_check_nv_stru;
+
+
+
+typedef struct _diag_cmd_config_ndm_connect_para_stru_ {
+    td_u16 ndm_tei;
+    td_u16 tl_big_packet_size;
+
+
+    td_u8 work_mode;
+    td_u8 report_search_result_period;
+    td_u8 search_net_short_timeout;
+    td_u8 result_expire_check_period;
+
+    td_u8 cco_freq_scan_period;
+    td_u8 sta_freq_scan_period;
+    td_u8 ndm_wait_respond_max_time;
+    td_u8 chl_pkt_use_highest_lid_time;
+
+    td_u16 send_connect_req_period;
+    td_u16 heartbeat_period;
+
+    td_u16 rpt_check_timer_cycle;
+    td_u8 chl_tl_send_num;
+    td_u8 chl_tl_send_window;
+
+    td_u32 chl_tl_retry_timeout;
+    td_u32 chl_tl_rcv_timeout;
+    td_u16 chl_tl_snd_interval;
+    td_u16 chl_tl_delay_ack_time;
+    td_u8 not_join_net_resend_cnt;
+    td_u8 is_auto_selected;
+    td_u16 default_id;
+    td_u16 selected_id_list[4];
+} diag_cmd_config_ndm_connect_para_stru;
+
+typedef struct _diag_cmd_config_sta_gpio_set_para_stru_ {
+    td_u8 tx_app_switch;
+
+
+    td_u8 pad;
+    td_u16 message_send_length;
+
+    td_u32 pad1;
+    td_u16 pad2;
+    td_u16 pad3;
+} diag_cmd_config_sta_gpio_set_para_stru;
+
+typedef struct {
+    td_u8 max_buff_num;
+    td_u8 rx_queue_depth;
+    td_u8 per_cor_num_bcn;
+    td_u8 min_bcn_num;
+
+    td_u8 save_proxy_info_rt_cnt;
+    td_u8 opti_policy;
+    td_u8 min_discovering_num;
+    td_u8 wait_proxy_time;
+
+    td_u8 cco_check_heart_time;
+    td_u8 pco_rpt_heart_time;
+    td_u8 sta_send_heart_min_time;
+    td_u8 mesh_mode_time;
+
+    td_u8 lock_net_mode;
+    td_u8 select_assoc_timeout;
+    td_u8 select_fc_timeout;
+    td_u8 select_beacon_timeout;
+
+    td_u8 assoc_state_timeout;
+    td_u8 sta_offline_by_no_beacon_time;
+    td_u8 pad[2];
+} diag_cmd_config_network_opti_params;
+
+
+typedef struct {
+    td_u8 report_switch;
+    td_u8 report_period;
+    td_u8 report_num;
+    td_u8 pad;
+    diag_cmd_config_network_opti_params opti_policy;
+} diag_cmd_config_comm_rate_opti;
+
+typedef struct {
+    td_bool mac_ctrl_enable;
+
+
+    td_bool duty_enable;
+    td_u8 duty_percent;
+    td_u8 pad;
+
+    td_u32 max_sendlength;
+
+    td_bool period1_duty_percent_enable;
+    td_bool period2_duty_percent_enable;
+    td_bool period3_duty_percent_enable;
+    td_u8 pad1;
+
+    td_u32 duty_period1;
+    td_u32 duty_period2;
+    td_u32 duty_period3;
+} diag_cmd_config_mac_duty_ctrl_para_stru;
+
+typedef struct {
+    td_u8 pad1[2];
+    td_u8 sync_timeout_th;
+    td_u8 is_use_all_sta_sync_target : 1;
+    td_u8 is_neighbor_enable : 1;
+    td_u8 pad : 6;
+} diag_cmd_sel_sync_sta_policy_nv_stru;
+
+typedef struct {
+    td_u8 p2p_search_freq_times;
+    td_u8 p2p_connect_mode;
+    td_u8 send_req_max_num;
+    td_u8 is_show_p2p_log;
+
+    td_u16 p2p_req_period;
+    td_u16 rvsd;
+} diag_cmd_config_ciu_ctrl_nv_stru;
+
+typedef struct {
+    td_u8 snr_collect_period;
+    td_u8 snr_unit_fc_cnt_abs;
+
+
+    td_s8 snr_avg_th;
+    td_u8 snr_unit_duration;
+
+    td_u16 attenuation_th;
+
+
+    td_u8 fast_lock_duration;
+
+
+    td_u8 pad;
+
+    td_u8 fast_accurate_rounds[4];
+
+
+    td_u8 fast_accurate_avgs[4];
+
+
+
+    td_u16 pream_sta_num_th;
+
+
+
+    td_u8 alpha_numerator;
+    td_u8 alpha_denominator;
+} diag_cmd_config_tf_stru;
+
+
+typedef struct {
+    td_bool is_pi_enable;
+    td_u8 ntb_query_parallel_num;
+    td_u8 ntb_query_turn_cnt_max;
+    td_u8 identify_fail_cnt_max;
+
+
+
+    td_u16 parallel_query_timeout;
+    td_u16 check_over_timeout;
+
+
+
+    td_u8 phase_cnt_th_min;
+    td_u8 phase_cnt_other_th_min;
+    td_u8 phase_cnt_other_th;
+    td_u8 phase_cnt_no_other_th_min;
+
+    td_bool is_report_zero_cross_ntb_req;
+    td_bool is_report_zero_cross_ntb_rsp;
+    td_bool is_report_zero_cross_ntb_cco;
+    td_u8 pad;
+
+    td_u16 ntb_report_timer_period;
+    td_u16 cco_period_th;
+    td_u16 zc_collect_buff_num;
+    td_u8 zc_compare_num;
+    td_u8 pad1[5];
+} diag_cmd_config_pi_config;
+
+typedef struct {
+    td_bool is_security_enable;
+    td_bool is_random_negotiation;
+    td_u16 rand_negotiation_time_max;
+
+    td_u8 fast_negotiate_max_cnt;
+    td_u8 slow_negotiate_timeout;
+    td_u8 wait_server_hello_timeout;
+    td_u8 wait_server_hello_timeout_min;
+
+    td_u8 wait_server_hello_timeout_max_150k;
+    td_u8 set_nek_parallel_num;
+    td_u8 parallel_notify_timeout;
+    td_u8 parallel_notify_turn_max_cnt;
+
+    td_u32 nek_timeout;
+    td_u16 delay_update_nek_time;
+    td_u16 negotiate_timeout;
+
+    td_u8 negotiatning_max_num;
+    td_u8 negotiate_timeout_check_period;
+    td_u16 send_interval_min_150k;
+    td_u32 rand_negotiation_time_max_150k;
+    td_u32 first_nek_timeout_150k;
+} diag_cmd_security_nv_stru;
+# 19 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c" 2
+# 1 "../../target/config/nv/soc_cmn_nv.h" 1
+# 16 "../../target/config/nv/soc_cmn_nv.h"
+typedef struct {
+    td_u32 ram_size;
+    td_s32 agc_gain;
+    td_u16 triger_type;
+    td_u16 period_time;
+    td_u16 triger_time;
+    td_u16 name_id;
+
+    td_u8 times_per_period;
+    td_u8 c_power_on_eable;
+    td_u8 collecting;
+    td_u8 is_follow_mode;
+} ext_ndm_data_collect_nv;
+
+typedef struct {
+    ext_ndm_data_collect_nv data_collect_nv;
+
+    td_u8 spi_write_time_out;
+    td_u8 spi_read_time_out;
+    td_u8 sd_full_led_fresh_duration;
+
+
+
+
+    td_s8 ndm_temp_thres[4];
+    td_char sc_folder_name[(21)];
+
+    td_u8 ccomac[6];
+    td_u8 freq;
+    td_u8 is_fix_freq;
+
+    td_u8 snid;
+    td_u8 reserved[3];
+    td_u8 target_ip[4];
+} ext_nv_cmn_cfg_id;
+
+typedef struct {
+    td_u8 conn_vertify[128];
+    td_u8 conn_salt[20];
+    td_u32 salt_len;
+} ext_nv_secure_conn;
+
+typedef struct {
+    td_u8 uart_cfg : 1;
+    td_u8 pad1 : 7;
+    td_u8 pad2;
+    td_u16 pad3;
+    td_u32 pad4;
+} ext_nv_test;
+# 20 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c" 2
+# 1 "../../target/config/nv/app_nv.h" 1
+# 25 "../../target/config/nv/app_nv.h"
+typedef struct {
+    td_u8 dev_addr[6];
+    td_u8 rsv[10];
+} app_dev_addr_inf;
+
+typedef struct {
+    td_u32 filc_crc;
+    td_u8 file_attr;
+    td_u8 rsv[3];
+} app_upg_inf;
+
+typedef struct {
+    td_u8 simu_meter;
+    td_u8 simu_evt;
+    td_u8 simu_evt_delay;
+    td_u8 rsv;
+} mrs_simu_meter_inf;
+
+typedef struct {
+    td_u32 identify_duration;
+    td_u32 report_duration;
+
+    td_u16 start_cmd_interval;
+
+
+    td_u16 stop_cmd_interval;
+
+
+
+    td_u16 delay_white_list_duration;
+    td_u16 query_sta_interval;
+
+    td_u16 refrash_topo_interval;
+    td_u16 query_sta_max_way;
+
+    td_u8 query_sta_timeout;
+
+    td_u8 query_max_cnt;
+
+
+    td_u8 identify_duration_rate;
+    td_u8 pad2;
+} mrs_cco_tf_inf;
+
+typedef struct {
+    td_u16 tf_check_period;
+
+    td_u16 tf_stop_while_not_receive;
+
+    td_u16 tf_unlock_while_leave_network;
+
+    td_u16 tf_start_interval;
+
+
+} mrs_sta_tf_inf;
+
+
+typedef struct {
+    td_u8 is_network_idf_enable;
+    td_u8 wait_new_sta_max_time;
+    td_u8 parallel_num;
+    td_u8 rvsd;
+
+
+    td_u32 time_diff;
+} module_cco_identify_inf;
+# 21 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c" 2
+# 1 "../../bsp/inc/soc_21_upg.h" 1
+# 9 "../../bsp/inc/soc_21_upg.h"
+# 1 "../../target/include/dw21_platform.h" 1
+# 11 "../../target/include/dw21_platform.h"
+# 1 "../../target/include/interface/rom/dw21_platform_rom.h" 1
+
+
+
+
+
+
+
+# 1 "../../target/include/interface/rom/crg_reg_offset.h" 1
+# 9 "../../target/include/interface/rom/dw21_platform_rom.h" 2
+# 1 "../../target/include/interface/rom/crg_reg_offset_field.h" 1
+# 10 "../../target/include/interface/rom/dw21_platform_rom.h" 2
+# 1 "../../target/include/interface/rom/sysctrl_reg_offset.h" 1
+# 11 "../../target/include/interface/rom/dw21_platform_rom.h" 2
+# 1 "../../target/include/interface/rom/sysctrl_reg_offset_field.h" 1
+# 12 "../../target/include/interface/rom/dw21_platform_rom.h" 2
+# 1 "../../rom/bsp/system/os/Huawei_LiteOS/targets/dw21v100/user/dw21.h" 1
+
+
+
+
+
+
+typedef enum IRQn
+{
+
+    NonMaskableInt_IRQn = -14,
+    MemoryManagement_IRQn = -12,
+    BusFault_IRQn = -11,
+    UsageFault_IRQn = -10,
+    SVCall_IRQn = -5,
+    DebugMonitor_IRQn = -4,
+    PendSV_IRQn = -2,
+    SysTick_IRQn = -1,
+    WatchDog_IRQn = 0,
+    Phy_IRQn = 1,
+    Chiper_IRQn = 2,
+    Ssp0_IRQn = 3,
+    I2c_IRQn = 4,
+    Uart1_IRQn = 5,
+    Uart0_IRQn = 6,
+    Timer0_IRQn = 7,
+    Timer1_IRQn = 8,
+    Timer2_IRQn = 9,
+    Timer3_IRQn = 10,
+    Timer4_IRQn = 11,
+    Timer5_IRQn = 12,
+    Gpio_IRQn = 13,
+    Sfc_IRQn = 14,
+    Spacc_norm_IRQn = 15,
+    Ssp1_IRQn = 16,
+ IRQ_MAX_NUM = 17
+} IRQn_Type;
+# 13 "../../target/include/interface/rom/dw21_platform_rom.h" 2
+
+extern td_u32 g_cfg_apb_clock;
+extern td_u32 g_cfg_arm_clock;
+extern td_u32 g_cfg_uart_clock;
+# 12 "../../target/include/dw21_platform.h" 2
+
+td_void app_io_init(td_void);
+td_void app_main(td_void);
+# 10 "../../bsp/inc/soc_21_upg.h" 2
+# 19 "../../bsp/inc/soc_21_upg.h"
+extern const td_u32 g_ver_magic;
+
+typedef enum {
+    EXT_21_UPG_TYPE_NONE = 0,
+    EXT_21_UPG_TYPE_KERNEL = 1,
+    EXT_21_UPG_TYPE_APP,
+    EXT_21_UPG_TYPE_BOOT,
+    EXT_21_UPG_TYPE_PARTITION,
+} ext_21_upg_type;
+
+
+
+
+typedef struct {
+    td_u32 hash_alg : 16;
+    td_u32 sign_alg : 6;
+    td_u32 sign_param : 10;
+    td_u8 signature_1[256];
+    td_u8 signature_2[256];
+    td_u8 key_n_2[256];
+} ext_upg_secure_info;
+
+typedef struct {
+    td_u32 attribute_compress : 1;
+    td_u32 attribute_pad : 31;
+    td_u32 offset;
+    td_u32 compress_size;
+} ext_21_upg_head_section;
+
+typedef struct {
+    td_u16 min_id;
+    td_u16 max_id;
+} ext_21_upg_head_product;
+
+
+
+
+typedef struct {
+    td_u32 chip_magic;
+    td_u8 check_sum[32];
+    td_u32 file_len;
+    td_u32 ver_magic;
+    td_u32 attribute_pad;
+
+    td_u16 manufactuer_code;
+    td_u8 struct_type;
+    td_u8 file_type;
+    ext_21_upg_head_product product_list[2];
+
+    td_u8 section_count;
+    td_u8 pad[3];
+
+    td_u32 section_list_offset;
+    td_u32 section_list_size;
+
+    td_u32 secure_info_offset;
+    td_u32 secure_info_size;
+
+    td_u32 partition_info_offset;
+    td_u32 partition_info_size;
+
+    ext_partition_ver_info partion_ver;
+
+
+
+
+
+} ext_21_upg_head;
+
+typedef struct {
+    td_u32 head_before_offset;
+    td_u32 head_end_magic;
+} ext_21_upg_tail;
+
+typedef struct {
+    td_u32 mode_magic;
+    td_u16 pad;
+    td_u16 upg_magic[3];
+    td_u32 head_before_offset;
+    td_u32 head_end_magic;
+} ext_21_upg_tail_new;
+
+
+
+typedef struct {
+    td_u32 offset;
+    td_u32 size;
+    td_u32 check_sum;
+} ext_start_tbl_section;
+
+typedef struct {
+    td_u32 check_sum;
+    td_u32 tbl_len;
+    td_u32 ver_magic;
+    td_u32 attribute_check_nvfile : 1;
+    td_u32 attribute_check_nvfile_ver : 1;
+    td_u32 attribute_pad_1 : 30;
+    td_u8 tbl_type;
+    td_u8 pad[3];
+    td_u32 info_2_kernel;
+    td_u32 secure_info_offset;
+    td_u32 secure_info_size;
+    ext_start_tbl_section section[1];
+} ext_start_tbl;
+
+
+typedef enum {
+    EXT_START_UPG_REASON_NONE,
+    EXT_START_UPG_REASON_TBL_ERR,
+    EXT_START_UPG_REASON_TBL_CODE1_ERR,
+    EXT_START_UPG_REASON_TBL_CODE2_ERR,
+    EXT_START_UPG_REASON_TBL_NV_ERR,
+    EXT_START_UPG_REASON_TBL_NV_NOT_MATCH,
+    EXT_START_UPG_REASON_UPG,
+} ext_start_upg_reason;
+
+td_u32 uapi_upg_nv_clear_mode(td_void);
+td_u32 uapi_upg_get_start_upg_mode(td_u8 *start_upg_mode);
+td_u32 uapi_upg_restart_get_file_info(td_u32 *flash_addr, td_u32 *flash_size, td_u32 *crc);
+# 22 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c" 2
+# 1 "../../target/config/nv/soc_nv_upg.h" 1
+# 29 "../../target/config/nv/soc_nv_upg.h"
+typedef struct {
+
+
+
+
+
+
+    td_u8 enable : 1;
+    td_u8 pad : 7;
+    td_u8 period;
+
+
+
+
+
+    td_u8 timer_cnt;
+
+
+
+
+    td_u8 loop_cnt;
+} ext_upg_delay_wait_cfg;
+# 59 "../../target/config/nv/soc_nv_upg.h"
+typedef struct {
+    td_u8 loop_max;
+    td_u8 loop_interval;
+    td_u16 send_interval;
+} ext_upg_qry_info_cfg;
+# 72 "../../target/config/nv/soc_nv_upg.h"
+typedef struct {
+    td_u8 succ_ratio;
+    td_u8 exception_max_count;
+    td_u8 data_loop_max;
+    td_u8 data_send_interval;
+    td_u8 query_send_interval;
+
+
+
+
+
+
+    td_u8 query_switch : 1;
+
+
+
+
+    td_u8 query_count : 7;
+    td_u16 pad;
+} ext_upg_broadcast_cfg;
+# 100 "../../target/config/nv/soc_nv_upg.h"
+typedef struct {
+    td_u8 delayed_for_send_restart;
+
+    td_u8 delayed_for_recv_to_restart;
+
+    td_u8 send_count;
+    td_u8 send_interval;
+} ext_upg_affirm_cfg;
+# 116 "../../target/config/nv/soc_nv_upg.h"
+typedef struct {
+    td_u8 bc_send_interval;
+
+    td_u8 send_interval;
+
+
+
+
+    td_u16 bc_loop : 4;
+
+    td_u16 bc_delayed : 6;
+    td_u16 delayed : 6;
+} ext_upg_notify_start_cfg;
+# 137 "../../target/config/nv/soc_nv_upg.h"
+typedef struct {
+    td_u8 succ_ratio;
+    td_u8 exception_max_count;
+
+
+
+
+
+    td_u8 data_loop_max;
+    td_u8 data_send_interval;
+    td_u8 query_send_interval;
+
+
+
+
+    td_u8 query_switch : 1;
+
+
+
+
+    td_u8 query_count : 7;
+    td_u16 pad;
+} ext_upg_unicast_cfg;
+
+
+
+
+
+typedef struct {
+
+
+
+
+    td_u8 bc_switch : 1;
+
+
+
+
+    td_u8 switch_code : 1;
+
+
+
+    td_u8 max_ways : 6;
+
+    td_u8 query_loop_interval;
+
+    td_u8 data_loop_interval;
+    td_u8 switch_schedule_delay;
+    ext_upg_broadcast_cfg bc;
+    ext_upg_unicast_cfg uc;
+    ext_upg_notify_start_cfg start;
+    ext_upg_affirm_cfg affirm;
+    ext_upg_delay_wait_cfg wait;
+    ext_upg_qry_info_cfg qry;
+} ext_upg_cfg;
+
+
+
+
+
+
+typedef struct {
+    ext_upg_cfg cfg[3];
+} ext_upg_cfg_nv;
+
+typedef struct {
+    td_u16 num_per_pack;
+    td_u16 interval;
+} upg_report_para;
+
+typedef struct {
+    upg_report_para status[2];
+} ext_upg_report_para_nv;
+# 23 "/home/code/output/DW21_release/mk_image/image/sdk/build_tmp/DW21_release/TEMP_DIR/sta/hdb/nv/nv_modem_struct_def.txt.c" 2

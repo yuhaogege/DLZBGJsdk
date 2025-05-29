@@ -1,0 +1,125 @@
+
+
+
+include $(MAIN_TOPDIR)/build_tmp/config/soc_product_config.mk
+include $(MAIN_TOPDIR)/boot/flashboot/boot_ver.mk
+
+ifeq ($(PRODUCT_CFG_BUILD_RELEASE), yes)
+MAIN_OUT_DIR_NAME = $(project_name)_release
+else
+MAIN_OUT_DIR_NAME = $(project_name)_debug
+endif
+
+MAIN_BUILD_TMP_OUT :=	$(MAIN_TOPDIR)/build_tmp/$(MAIN_OUT_DIR_NAME)
+MAIN_BUILD_OUTPUT :=	$(MAIN_TOPDIR)/output/$(MAIN_OUT_DIR_NAME)
+ALL_TARGET := $(MAIN_BUILD_TMP_OUT)/all/bin
+ALL_LIBS := $(MAIN_BUILD_TMP_OUT)/all/lib
+
+OUT=$(ALL_TARGET)/flashboot/start_from_romboot
+
+TARGET            := dw21_flash_boot
+TARGET_ELF        := $(OUT)/$(TARGET).elf
+TARGET_FLASH_BIN  := $(OUT)/$(TARGET)_flash.bin
+TARGET_FLASH_SECURE_BIN:= $(OUT)/$(TARGET)_secure_flash.bin
+TOOLS_BOOT_DIR := $(MAIN_TOPDIR)/tools/boot
+TARGET_FIX_ROM_BIN_BAK        := $(MAIN_TOPDIR)/target/libs/rom_bin/dw21_boot_fixrom.bin
+TARGET_FIX_ROM_BIN := $(OUT)/dw21_boot_fixrom.bin
+TARGET_HEX        := $(OUT)/$(TARGET).hex
+TARGET_ASM        := $(OUT)/$(TARGET).asm
+TARGET_MAP        := $(OUT)/$(TARGET).map
+TARGET_BIN        := $(OUT)/$(TARGET).bin
+TARGET_ROM	  	  := $(ALL_LIBS)/librom.o
+
+OBJCPFLAGS_ELF_TO_BIN   = -Obinary
+OBJCPFLAGS_ELF_TO_HEX   = -Oihex
+OBJCPFLAGS_BIN_TO_HEX   = -Ibinary -Oihex
+OBJCPFLAGS_ELF_TO_SREC  = -Osrec
+OBJCPFLAGS_ELF_TO_LIST  = -S
+
+# Defines the directory to store object files during compile
+PROJECTBASE = $(MAIN_TOPDIR)/boot/flashboot
+TOP_DIR := $(PROJECTBASE)
+LDSCRIPT = $(PROJECTBASE)/scripts/dw21_boot_from_romboot_linux_usermap.lds
+
+# rom directory
+CMN_DIR := $(PROJECTBASE)/../fixed_rom
+
+CFLAGS = -Werror -O2  -std=c99 -falign-functions=4 -mcpu=cortex-m3 -mthumb -fdata-sections -ffunction-sections -fno-inline -fno-common -DOBC_IMAGE_BOOT -DBOOT_VER=$(CFG_BOOT_VER)  
+ASFLAG = -Werror -O2  -mcpu=cortex-m3 -mthumb -fdata-sections -ffunction-sections -D__ASM__
+
+LDFLAGS = -nostdlib -L $(ALL_LIBS) -T $(LDSCRIPT) -nostartfiles -static -Wl,--gc-sections
+
+
+SRC = $(wildcard $(TOP_DIR)/lzmaram/*.c) \
+      $(wildcard $(TOP_DIR)/crc32/*.c)\
+	  $(wildcard $(TOP_DIR)/upg/*.c) \
+	  $(wildcard $(TOP_DIR)/nvm/*.c) \
+	  $(wildcard $(TOP_DIR)/partition_table/*.c) \
+      $(wildcard $(TOP_DIR)/arch/cortex_m3/dw21/*.c) \
+	  $(wildcard $(TOP_DIR)/cmd/*.c) \
+	  $(wildcard $(TOP_DIR)/rom_addition/*.c)
+	  
+ASM_SRC := ${wildcard $(TOP_DIR)/arch/cortex_m3/dw21/*.S}
+
+
+	
+
+OBJ := $(SRC:%.c=%.o)
+ASMOBJ := $(ASM_SRC:%.S=%.o)
+
+# The code under ROM can only depend on the header files under ROM.
+ROM_CFLAGS := $(CFLAGS) -Wall -I $(CMN_DIR) \
+          -I $(CMN_DIR)/include   \
+          -I $(MAIN_TOPDIR)/target/common_include\
+		  -I $(MAIN_TOPDIR)/build_tmp/config
+
+# Non-ROM
+NOROM_CFLAGS := $(ROM_CFLAGS) -Wall -I $(TOP_DIR) \
+          -I $(TOP_DIR)/include  
+
+NOROM_ASFLAG := $(ASFLAG) -Wall -I $(CMN_DIR)/include \
+	  -I $(TOP_DIR)/include
+
+.PHONY: all clean
+
+all: prepare $(TARGET_FLASH_BIN)
+$(TARGET_FLASH_BIN): $(TARGET_ELF)
+	$(Q)$(OBJCOPY) $(OBJCPFLAGS_ELF_TO_BIN) -R .rom.text -R .u_boot_cmd  -R .rom.data -R .rom.bss   -S  $(TARGET_ELF)  $(TARGET_FLASH_BIN)
+	#$(Q)$(OBJCOPY) $(OBJCPFLAGS_ELF_TO_BIN) -j .rom.text -j .u_boot_cmd  -j .rom.data -j .rom.bss -S  $(TARGET_ELF)  $(TARGET_FIX_ROM_BIN)
+	#$(Q)dd if=$(TARGET_FLASH_BIN) of=$(TARGET_BIN)
+	#$(Q)dd if=$(TARGET_FIX_ROM_BIN) of=$(TARGET_BIN) bs=8k seek=1
+	$(Q)$(OBJDUMP) -d $(TARGET_ELF) > $(TARGET_ASM)
+	$(Q)$(OBJDUMP) -stD $(TARGET_ELF) > $(TARGET_MAP)
+	#$(Q)if cmp -s $(TARGET_FIX_ROM_BIN) $(TARGET_FIX_ROM_BIN_BAK); \
+	#then echo "#########ROM BIN IS THE SAME!#########";  \
+	#else echo "#########ROM BIN IS DIFFERENT!#########"; exit 1;fi
+	$(Q)$(TOOLS_BOOT_DIR)/MakeFlashBootTool -i $(TARGET_FLASH_BIN) -o $(TARGET_FLASH_SECURE_BIN) -ver $(CFG_BOOT_VER) -rootkey $(TOOLS_BOOT_DIR)/root_private.pem \
+	-subkey $(TOOLS_BOOT_DIR)/subkey_private.pem -compress_flag 0
+
+
+
+$(TARGET_ELF):$(OBJ) $(ASMOBJ)
+	$(CC) $(CFLAGS)  $(LDFLAGS) $(sort $^)  -o $@ -Wl,--just-symbols=$(PROJECTBASE)/scripts/fixrom.sym
+
+$(OBJ): %.o : %.c
+	@echo Compile  $<
+	$(Q)$(CC) $(NOROM_CFLAGS) -c $< -o $@
+
+$(ASMOBJ):%.o:%.S
+	@echo Compile  $<
+	$(Q)$(CC) $(NOROM_ASFLAG) -c $< -o $@
+
+
+prepare:
+	$(Q)mkdir -p $(OUT)
+	$(Q)mkdir -p $(ALL_LIBS)
+
+clean_out:
+	$(Q)$(RM) $(OUT)
+	
+clean: 
+	$(Q)$(RM) $(OBJ)
+	$(Q)$(RM) $(ASMOBJ)
+
+	
+
